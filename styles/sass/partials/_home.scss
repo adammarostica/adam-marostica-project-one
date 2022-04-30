@@ -1,0 +1,37 @@
+.spaces {
+  .space {
+    margin-top: 50px;
+    display: flex;
+  }
+  .space:last-of-type {
+    margin-bottom: 50px;
+  }
+  span {
+    display: block;
+    margin-right: 20px;
+  }
+  .fa-stack-2x {
+    color: $rustred;
+  }
+}
+
+.readMore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $darkred;
+  img {
+    width: 90%;
+  }
+  img:first-of-type {
+    position: relative;
+    top: -15px;
+    box-shadow: 10px 10px $dustyorange;
+  }
+  img:last-of-type {
+    box-shadow: -10px 10px $dustyorange;
+    position: relative;
+    bottom: -15px;
+  }
+  
+}
