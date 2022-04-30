@@ -1,5 +1,8 @@
+@import './partials/setup';
 @import './partials/variables';
-
-body {
-  background: $dustyorange;
-}
+@import './partials/base';
+@import './partials/header';
+@import './partials/home';
+@import './partials/shop';
+@import './partials/contact';
+@import './partials/mediaQueries.scss';

@@ -1,0 +1,92 @@
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+  &:focus {
+    left: 0;
+  }
+}
+
+body {
+  background: $black;
+  color: $offwhite;
+  font-family: $chathura;
+  font-size: 39px;
+  line-height: 30px;
+  letter-spacing: 1.9px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  color: $dustyorange;
+  font-family: $tulpen;
+  font-size: clamp(125px, 40vw, 261.4px);
+  text-align: center;
+  letter-spacing: 2.4px;
+  span {
+    display: block;
+    color: $offwhite;
+    font-family: $chathura;
+    font-size: clamp(30px, 15vw, 83.2px);
+    font-weight: 700;
+    line-height: 94.7px;
+    letter-spacing: 2.6px;
+  }
+}
+
+h2,
+h3 {
+  font-size: 68px;
+  line-height: 58px;
+  letter-spacing: 2.2px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: $offwhite;
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+button {
+  border: none;
+  padding: 2px 15px;
+  background: $rustred;
+  color: $offwhite;
+  font-family: $tulpen;
+  cursor: pointer;
+}
+
+nav {
+  font-weight: 700;
+  text-align: center;
+  line-height: 29px;
+  letter-spacing: 1.9px;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1260px;
+  margin: 0 auto;
+}

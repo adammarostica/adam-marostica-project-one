@@ -1,0 +1,52 @@
+header {
+  height: 40vh;
+  background: url('../assets/home-image-1.jpg') no-repeat center / cover;
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+    }
+    li {
+      text-transform: uppercase;
+    }
+    a {
+      padding: 10px 10px;
+    }
+    .navHome {
+      order: 1;
+    }
+    .navAbout {
+      order: 2
+    }
+    .navLogo {
+      order: 3;
+      font-family: $tulpen;
+      text-transform: capitalize;
+      display: none;
+    }
+    .navBlog {
+      order: 4;
+    }
+    .navContact {
+      order: 5;
+    }
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  span {
+    position: relative;
+    left: clamp(3px, 0.7vw, 11px);
+    text-align: left;
+  }
+}
