@@ -14,9 +14,10 @@ body {
   background: $black;
   color: $offwhite;
   font-family: $chathura;
-  font-size: 39px;
+  font-size: clamp(30px, 8vw, 39px);
   line-height: 30px;
   letter-spacing: 1.9px;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -30,13 +31,13 @@ h1 {
   color: $dustyorange;
   font-family: $tulpen;
   font-size: clamp(125px, 40vw, 261.4px);
-  text-align: center;
   letter-spacing: 2.4px;
+  text-align: center;
   span {
     display: block;
     color: $offwhite;
     font-family: $chathura;
-    font-size: clamp(30px, 15vw, 83.2px);
+    font-size: clamp(39px, 15vw, 83.2px);
     font-weight: 700;
     line-height: 94.7px;
     letter-spacing: 2.6px;

@@ -237,9 +237,10 @@ body {
   background: #111010;
   color: #fff;
   font-family: "Chathura", Arial, Helvetica, sans-serif;
-  font-size: 39px;
+  font-size: clamp(30px, 8vw, 39px);
   line-height: 30px;
   letter-spacing: 1.9px;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -253,14 +254,14 @@ h1 {
   color: #ff8327;
   font-family: "Tulpen One", cursive;
   font-size: clamp(125px, 40vw, 261.4px);
-  text-align: center;
   letter-spacing: 2.4px;
+  text-align: center;
 }
 h1 span {
   display: block;
   color: #fff;
   font-family: "Chathura", Arial, Helvetica, sans-serif;
-  font-size: clamp(30px, 15vw, 83.2px);
+  font-size: clamp(39px, 15vw, 83.2px);
   font-weight: 700;
   line-height: 94.7px;
   letter-spacing: 2.6px;
@@ -341,9 +342,13 @@ header nav {
           justify-content: center;
 }
 header nav ul {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 header nav li {
   text-transform: uppercase;
@@ -393,6 +398,18 @@ header .heading {
 }
 header span {
   position: relative;
-  left: clamp(3px, 0.7vw, 11px);
+  top: clamp(-4px, 3vw, 13px);
+  left: clamp(4px, 0.8vw, 7px);
   text-align: left;
+}
+
+@media (min-width: 450px) {
+  header span {
+    top: clamp(15px, 5vw, 43px);
+  }
+}
+@media (min-width: 550px) {
+  header span {
+    top: clamp(15px, 7vw, 43px);
+  }
 }

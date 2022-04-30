@@ -11,7 +11,9 @@ header {
     display: flex;
     justify-content: center;
     ul {
+      width: 100%;
       display: flex;
+      justify-content: space-between;
     }
     li {
       text-transform: uppercase;
@@ -46,7 +48,8 @@ header {
   }
   span {
     position: relative;
-    left: clamp(3px, 0.7vw, 11px);
+    top: clamp(-4px, 3vw, 13px);
+    left: clamp(4px, 0.8vw, 7px);
     text-align: left;
   }
 }

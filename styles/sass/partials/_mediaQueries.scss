@@ -1,0 +1,15 @@
+@media (min-width: 450px) {
+  header {
+    span {
+      top: clamp(15px, 5vw, 43px);
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  header {
+    span {
+      top: clamp(15px, 7vw, 43px)
+    }
+  }
+}
