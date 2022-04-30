@@ -328,6 +328,7 @@ nav {
 }
 
 header {
+  position: relative;
   height: 35vh;
   background: url("../assets/home-image-1.jpg") no-repeat center/cover;
 }
@@ -432,15 +433,19 @@ header span {
   font-size: 1.6rem;
   line-height: 1.6rem;
 }
-header .headerBox {
-  display: none;
+
+.headerBox {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  bottom: -70px;
 }
 
 .spaces .wrapper {
   width: 85%;
 }
 .spaces .space {
-  margin-top: 50px;
+  margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -587,16 +592,5 @@ footer {
     font-size: 2rem;
     top: -2px;
     left: -46px;
-  }
-}
-@media (min-width: 650px) {
-  header .headerBox {
-    display: block;
-  }
-  header .headerBox img {
-    width: 50%;
-    position: absolute;
-    right: 0;
-    top: 170px;
   }
 }
