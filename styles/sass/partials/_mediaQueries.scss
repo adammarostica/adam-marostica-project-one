@@ -1,0 +1,40 @@
+@media (min-width: $tablet) {
+  header {
+    min-height: 65vh;
+    .wrapper {
+      max-width: 450px;
+    }
+    nav {
+      padding-top: 15px;
+      .navLogo {
+        display: block;
+      }
+    }
+    .heading {
+      padding-bottom: 0;
+    }
+    h1 {
+      font-size: 7rem;
+      margin-bottom: 30px;
+    }
+    span {
+      font-size: 2rem;
+      top: -2px;
+      left: -46px;
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  header {
+    .headerBox {
+    display: block;
+      img {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 170px;
+      }
+    }
+  }
+}
