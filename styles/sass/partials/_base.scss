@@ -30,14 +30,15 @@ h1 {
   margin: 0;
   color: $dustyorange;
   font-family: $tulpen;
-  font-size: clamp(125px, 40vw, 261.4px);
+  // font-size: clamp(125px, 40vw, 261.4px);
+  // line-height: clamp(30px, 10vw, 120px);
   letter-spacing: 2.4px;
   text-align: center;
   span {
     display: block;
     color: $offwhite;
     font-family: $chathura;
-    font-size: clamp(39px, 15vw, 83.2px);
+    // font-size: clamp(39px, 15vw, 83.2px);
     font-weight: 700;
     line-height: 94.7px;
     letter-spacing: 2.6px;

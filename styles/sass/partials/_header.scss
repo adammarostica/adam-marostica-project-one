@@ -1,5 +1,5 @@
 header {
-  height: 40vh;
+  height: 35vh;
   background: url('../assets/home-image-1.jpg') no-repeat center / cover;
   .wrapper {
     flex-direction: column;
@@ -43,13 +43,41 @@ header {
   .heading {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 100%;
+    padding-bottom: 35px;
   }
+  h1 {
+    width: fit-content;
+    font-size: 100px;
+  };
   span {
     position: relative;
-    top: clamp(-4px, 3vw, 13px);
-    left: clamp(4px, 0.8vw, 7px);
+    top: -17px;
+    left: 3px;
+    width: fit-content;
+    font-size: 32px;
     text-align: left;
   }
 }
+// h1 {
+//   width: fit-content;
+//   color: $tertiary;
+//   letter-spacing: 2.4px;
+//   font-size: 13rem;
+//   font-weight: normal;
+//   padding: 0;
+//   margin: 0 auto;
+//   margin-top: 200px;
+//   line-height: 230px;
+// span {
+//   font-family: "Chathura";
+//   width: fit-content;
+//   color: $primary;
+//   font-size: 4.2rem;
+//   line-height: 0px;
+//   letter-spacing: 2.6px;
+//   margin: 0;
+//   display:block;
+//   padding-left: 10px;
+// }

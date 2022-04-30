@@ -253,7 +253,6 @@ h1 {
   margin: 0;
   color: #ff8327;
   font-family: "Tulpen One", cursive;
-  font-size: clamp(125px, 40vw, 261.4px);
   letter-spacing: 2.4px;
   text-align: center;
 }
@@ -261,7 +260,6 @@ h1 span {
   display: block;
   color: #fff;
   font-family: "Chathura", Arial, Helvetica, sans-serif;
-  font-size: clamp(39px, 15vw, 83.2px);
   font-weight: 700;
   line-height: 94.7px;
   letter-spacing: 2.6px;
@@ -321,7 +319,7 @@ nav {
 }
 
 header {
-  height: 40vh;
+  height: 35vh;
   background: url("../assets/home-image-1.jpg") no-repeat center/cover;
 }
 header .wrapper {
@@ -395,15 +393,26 @@ header .heading {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 100%;
+  padding-bottom: 35px;
+}
+header h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 100px;
 }
 header span {
   position: relative;
-  top: clamp(-4px, 3vw, 13px);
-  left: clamp(4px, 0.8vw, 7px);
+  top: -17px;
+  left: 3px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 32px;
   text-align: left;
 }
 
@@ -451,15 +460,4 @@ header span {
           box-shadow: -10px 10px #ff8327;
   position: relative;
   bottom: -15px;
-}
-
-@media (min-width: 450px) {
-  header span {
-    top: clamp(15px, 5vw, 43px);
-  }
-}
-@media (min-width: 550px) {
-  header span {
-    top: clamp(15px, 7vw, 43px);
-  }
 }
