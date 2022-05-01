@@ -1,27 +1,135 @@
 @media (min-width: $tablet) {
   header {
-    min-height: 65vh;
-    .wrapper {
-      max-width: 450px;
-    }
+    min-height: 50vh;
+    
     nav {
       padding-top: 15px;
       .navLogo {
         display: block;
       }
     }
-    .heading {
-      padding-bottom: 0;
-    }
     h1 {
-      font-size: 7rem;
-      margin-bottom: 30px;
+      font-size: 9rem;
+      line-height: 9rem;
     }
     span {
-      font-size: 2rem;
-      top: -2px;
-      left: -46px;
+      font-size: 2.9rem;
+      line-height: 2.9rem;
+      top: -42px;
+      left: -53px;
+    }
+    .headerBox {
+      bottom: -80px;
     }
   }
 }
 
+@media (min-width: 768px) {
+  header {
+    min-height: 65vh;
+    h1 {
+      font-size: 13.07rem;
+      line-break: 13.07rem;
+      margin-bottom: 20px;
+    }
+    span {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+      top: -24px;
+      left: -73px;
+    }
+    .headerBox {
+      bottom: -90px;
+    }
+  }
+  .spaces {
+    margin: 110px 0 80px;
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .space {
+      flex-basis: 50%;
+    }
+  }
+  .readMore {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .wrapper {
+      width: 40%;
+      p {
+        padding-bottom: 20px;
+      }
+      &:first-of-type {
+        padding-right: 10vw;
+      }
+      &:last-of-type {
+        text-align: right;
+        padding-left: 10vw;
+        p {
+          text-align: left;
+        }
+      }
+    }
+    img,
+    div {
+      flex-basis: 42%;
+    }
+    img:first-of-type {
+      top: -30px;
+      box-shadow: 15px 15px $dustyorange;
+    }
+    img:last-of-type {
+      order: 1;
+      bottom: -30px;
+      box-shadow: -15px 15px $dustyorange;
+    }
+  }
+  .party {
+    padding-top: 100px;
+    .wrapper {
+      width: 70%;
+    }
+    button {
+      margin-bottom: 100px;
+    }
+  }
+
+  .events {
+    padding: 80px 0;
+    .wrapper {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      flex-basis: 30%;
+      height: 100%;
+      margin: 0 60px 0 0;
+    }
+    div {
+      flex-basis: 70%;
+    }
+    h3 {
+      margin: 20px 0;
+    }
+    p {
+      margin: 0;
+    }
+    button {
+      margin-top: 30px;
+    }
+  }
+
+  .gallery {
+    padding: 60px 0;
+    background: $darkred;
+    .wrapper {
+      width: 80%;
+      justify-content: space-between;
+      img {
+        width: calc(95% / 3);
+      }
+    }
+  }
+}

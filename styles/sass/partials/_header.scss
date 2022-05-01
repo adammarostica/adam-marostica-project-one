@@ -7,15 +7,18 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    max-width: 600px;
   }
   nav {
     display: flex;
     justify-content: center;
     padding-top: 10px;
+    z-index: 1;
     ul {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      font-size: 1.5rem;
     }
     li {
       text-transform: uppercase;
@@ -23,7 +26,7 @@ header {
     a {
       padding: 10px 15px;
       transition: color .3s ease-out;
-      font-size: 25px;
+      
       &:hover {
         color: $dustyorange;
       }
@@ -41,7 +44,7 @@ header {
       display: none;
       font-weight: 400;
       a { 
-        font-size: 40px;
+        font-size: 3rem;
       }
     }
     .navBlog {

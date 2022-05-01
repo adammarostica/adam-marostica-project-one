@@ -23,12 +23,16 @@ button {
   background: $rustred;
   color: $offwhite;
   font-family: $tulpen;
+  text-transform: capitalize;
   cursor: pointer;
   transition: background .3s ease-out, border-radius .3s ease-out;
   &:hover,
   &:focus {
     background: $dustyorange;
     border-radius: 5px;
+  }
+  &:focus {
+    outline: 3px solid $rustred;
   }
 }
 
