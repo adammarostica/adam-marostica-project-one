@@ -7,7 +7,6 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    max-width: 600px;
   }
   nav {
     display: flex;
@@ -16,6 +15,7 @@ header {
     z-index: 1;
     ul {
       width: 100%;
+      max-width: 600px;
       display: flex;
       justify-content: space-between;
       font-size: 1.5rem;
@@ -24,7 +24,7 @@ header {
       text-transform: uppercase;
     }
     a {
-      padding: 10px 15px;
+      padding: 10px 9px;
       transition: color .3s ease-out;
       
       &:hover {
@@ -52,6 +52,9 @@ header {
     }
     .navContact {
       order: 5;
+    }
+    .youAreHere a {
+      color: $dustyorange;
     }
   }
   .heading {

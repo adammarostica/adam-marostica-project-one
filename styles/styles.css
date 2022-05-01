@@ -327,7 +327,7 @@ nav {
 
 .wrapper {
   width: 90%;
-  max-width: 1260px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -348,7 +348,6 @@ header .wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
-  max-width: 600px;
 }
 header nav {
   display: -webkit-box;
@@ -362,6 +361,7 @@ header nav {
 }
 header nav ul {
   width: 100%;
+  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,7 +374,7 @@ header nav li {
   text-transform: uppercase;
 }
 header nav a {
-  padding: 10px 15px;
+  padding: 10px 9px;
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
 }
@@ -412,6 +412,9 @@ header nav .navContact {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
+}
+header nav .youAreHere a {
+  color: #ff8327;
 }
 header .heading {
   display: -webkit-box;
@@ -587,6 +590,27 @@ header span {
 footer {
   background: #2c2c2c;
   text-align: center;
+  padding: 10px;
+}
+
+header.blogHeader {
+  background: url("../assets/blog-header-1.jpg") no-repeat center/cover;
+}
+header .blogHeading {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .blogHeading h1 {
+  font-family: "Chathura", Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: left;
 }
 
 @media (min-width: 481px) {
@@ -612,6 +636,9 @@ footer {
   header .headerBox {
     bottom: -80px;
   }
+  header .blogHeading h1 {
+    font-size: 5rem;
+  }
 }
 @media (min-width: 768px) {
   header {
@@ -630,6 +657,12 @@ footer {
   }
   header .headerBox {
     bottom: -90px;
+  }
+  header.blogHeader {
+    min-height: 50vh;
+  }
+  header .blogHeading h1 {
+    font-size: 5rem;
   }
 
   .spaces {

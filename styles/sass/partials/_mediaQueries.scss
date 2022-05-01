@@ -1,7 +1,6 @@
 @media (min-width: $tablet) {
   header {
     min-height: 50vh;
-    
     nav {
       padding-top: 15px;
       .navLogo {
@@ -20,6 +19,9 @@
     }
     .headerBox {
       bottom: -80px;
+    }
+    .blogHeading h1 {
+      font-size: 5rem;
     }
   }
 }
@@ -40,6 +42,12 @@
     }
     .headerBox {
       bottom: -90px;
+    }
+    &.blogHeader {
+      min-height: 50vh;
+    }
+    .blogHeading h1 {
+      font-size: 5rem;
     }
   }
   .spaces {
