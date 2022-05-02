@@ -1,16 +1,106 @@
-
-header {
-  &.blogHeader {
-    background: url('../assets/blog-header-1.jpg') no-repeat center / cover;
-  }
-  .blogHeading {
-    flex-grow: 1;
+aside {
+  transform: translateY(-20px);
+  .container {
     display: flex;
-    align-items: center;
-    h1 {
-      font-family: $chathura;
-      color: white;
-      text-align: left;
+    align-items: flex-start;
+    margin: 0 3vw;
+    width: 100%;
+    background: $darkred;
+    padding: 0 3vw 50px 0;
+  }
+  img {
+    flex-basis: 40%;
+    object-fit: contain;
+    position: relative;
+    top: -3vw;
+    left: -3vw;
+  }
+  .wrapper {
+    flex-basis: 60%;
+  }
+  a {
+    color: $dustyorange;
+  }
+  h3 {
+    margin-top: 20px;
+    line-height: 2rem;
+  }
+  li {
+    font-size: 1.1rem;
+  }
+  li::before {
+    content: "•";
+    display: inline-block;
+    position: relative;
+    bottom: -2px;
+    margin: 0 10px; 
+    color: $rustred;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+  }
+}
+section.blog {
+  .img-wrapper {
+    width: 97%;
+  }
+  img {
+    position: relative;
+    margin-left: 3%;
+    box-shadow: -3vw 3vw $dustyorange;
+  }
+  .wrapper {
+    width: 80%;
+    padding: 60px 0 40px;
+    
+  }
+  article {
+    background-color: $black;
+    border-left: 3px solid $dustyorange;
+    border-bottom: 3px solid $dustyorange;
+  }
+  h2 {
+    line-height: 1.5rem;
+  }
+  .datePublished {
+    color: $dustyorange;
+    font-size: 1.3rem;
+  }
+  .blogPostContent {
+    margin-top: 25px;
+  }
+  p {
+    margin: 25px 0;
+  }
+}
+section.comments {
+  h4 {
+    font-size: 3rem;
+  }
+  .wrapper {
+    width: 90%;
+    padding: 50px 0;
+  }
+  .comment {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 30px 0; 
+    &:not(:nth-last-child(2)) {
+      margin-bottom: 70px;
+    }
+    img {
+      object-fit: contain;
+      flex-basis: 20%;
+      margin-top: 5px;
+    }
+    .userComment {
+      flex-basis: 75%;
+    }
+    h5 {
+      color: $dustyorange;
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
   }
 }

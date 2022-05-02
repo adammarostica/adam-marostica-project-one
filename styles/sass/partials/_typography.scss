@@ -7,14 +7,17 @@ body {
   background: $black;
   color: $offwhite;
   font-family: $chathura;
-  font-size: 30px;
-  line-height: 25px;
+  font-size: 1.5rem;
+  line-height: 1.3rem;
   letter-spacing: 1.9px;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+p {
   margin: 0;
 }
 
@@ -41,7 +44,7 @@ h3 {
 }
 
 p {
-  margin: 0;
+  line-height: 1.2rem;
 }
 
 ul {

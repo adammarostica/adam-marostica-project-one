@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -230,14 +231,17 @@ body {
   background: #111010;
   color: #fff;
   font-family: "Chathura", Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  line-height: 25px;
+  font-size: 1.5rem;
+  line-height: 1.3rem;
   letter-spacing: 1.9px;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+p {
   margin: 0;
 }
 
@@ -264,7 +268,7 @@ h3 {
 }
 
 p {
-  margin: 0;
+  line-height: 1.2rem;
 }
 
 ul {
@@ -442,12 +446,30 @@ header span {
   font-size: 1.6rem;
   line-height: 1.6rem;
 }
-
-.headerBox {
+header .headerBox {
   width: 50%;
   position: absolute;
   right: 0;
   bottom: -70px;
+}
+header.blogHeader {
+  background: url("../assets/blog-header-1.jpg") no-repeat center/cover;
+}
+header .blogHeading {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .blogHeading h1 {
+  font-family: "Chathura", Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: left;
 }
 
 .spaces {
@@ -593,24 +615,126 @@ footer {
   padding: 10px;
 }
 
-header.blogHeader {
-  background: url("../assets/blog-header-1.jpg") no-repeat center/cover;
+aside {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
-header .blogHeading {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+aside .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 3vw;
+  width: 100%;
+  background: #220303;
+  padding: 0 3vw 50px 0;
 }
-header .blogHeading h1 {
-  font-family: "Chathura", Arial, Helvetica, sans-serif;
-  color: white;
-  text-align: left;
+aside img {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  top: -3vw;
+  left: -3vw;
+}
+aside .wrapper {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+aside a {
+  color: #ff8327;
+}
+aside h3 {
+  margin-top: 20px;
+  line-height: 2rem;
+}
+aside li {
+  font-size: 1.1rem;
+}
+aside li::before {
+  content: "•";
+  display: inline-block;
+  position: relative;
+  bottom: -2px;
+  margin: 0 10px;
+  color: #bf2603;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+section.blog .img-wrapper {
+  width: 97%;
+}
+section.blog img {
+  position: relative;
+  margin-left: 3%;
+  -webkit-box-shadow: -3vw 3vw #ff8327;
+          box-shadow: -3vw 3vw #ff8327;
+}
+section.blog .wrapper {
+  width: 80%;
+  padding: 60px 0 40px;
+}
+section.blog article {
+  background-color: #111010;
+  border-left: 3px solid #ff8327;
+  border-bottom: 3px solid #ff8327;
+}
+section.blog h2 {
+  line-height: 1.5rem;
+}
+section.blog .datePublished {
+  color: #ff8327;
+  font-size: 1.3rem;
+}
+section.blog .blogPostContent {
+  margin-top: 25px;
+}
+section.blog p {
+  margin: 25px 0;
+}
+
+section.comments h4 {
+  font-size: 3rem;
+}
+section.comments .wrapper {
+  width: 90%;
+  padding: 50px 0;
+}
+section.comments .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 30px 0;
+}
+section.comments .comment:not(:nth-last-child(2)) {
+  margin-bottom: 70px;
+}
+section.comments .comment img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin-top: 5px;
+}
+section.comments .comment .userComment {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+section.comments .comment h5 {
+  color: #ff8327;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 481px) {
@@ -666,7 +790,7 @@ header .blogHeading h1 {
   }
 
   .spaces {
-    margin: 110px 0 80px;
+    margin: 110px 0 40px;
   }
   .spaces .wrapper {
     display: -webkit-box;
@@ -739,7 +863,7 @@ header .blogHeading h1 {
   }
 
   .events {
-    padding: 80px 0;
+    padding: 40px 0;
   }
   .events .wrapper {
     display: -webkit-box;
@@ -760,7 +884,7 @@ header .blogHeading h1 {
         flex-basis: 70%;
   }
   .events h3 {
-    margin: 20px 0;
+    margin: 0 0 20px;
   }
   .events p {
     margin: 0;

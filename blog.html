@@ -23,10 +23,10 @@
       <div class="wrapper">
         <nav>
           <ul>
-            <li class="navLogo"><a href="#" tabindex="-1">Bar-One</a></li>
-            <li class="navHome"><a href="#">Home</a></li>
+            <li class="navLogo"><a href="index.html" tabindex="-1">Bar-One</a></li>
+            <li class="navHome"><a href="index.html">Home</a></li>
             <li class="navAbout"><a href="#about">About</a></li>
-            <li class="navBlog youAreHere"><a href="blog.html">Blog</a></li>
+            <li class="navBlog youAreHere"><a href="#">Blog</a></li>
             <li class="navContact"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -39,7 +39,7 @@
     <main id="blogMainContent">
 
       <aside>
-        <div class="wrapper">
+        <div class="container">
           
           <img src="assets/sidebar-image.jpg" alt="A fresh pint of beer being poured from one of our many taps.">
           
@@ -63,10 +63,12 @@
 
       <section class="blog">
         
-        <img src="assets/post-image.jpg" alt="Several plates of freshly served menu items.">
+        <div class="img-wrapper">
+          <img src="assets/post-image.jpg" alt="Several plates of freshly served menu items.">
+        </div>
         
-        <div class="wrapper">
-          <article>
+        <article>
+            <div class="wrapper">
             
             <h2>New menu!</h2>
             <p class="datePublished">Monday January 30, 2019 by Saron</p>
@@ -87,35 +89,35 @@
       </section>
 
       <section class="comments">
-        
-        <div class="comment">
-          <img src="assets/comment-image-1.jpg" alt="User avatar" aria-hidden="true">
-          <div class="userComment">
-            <h4>Tuesday October 9th, 2019 by Sulaire</h4>
-            <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec.Donec viverra eleifend lacus, vitae ullamcorper metus. Sedsollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismodscelerisque ligula. Maecenas eu varius risus..</p>
+        <div class="wrapper">
+          <h4>Comments:</h4>
+          <div class="comment">
+            <img src="assets/comment-image-1.jpg" alt="User avatar" aria-hidden="true">
+            <div class="userComment">
+              <h5>Tuesday October 9th, 2019 by Sulaire</h5>
+              <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec.Donec viverra eleifend lacus, vitae ullamcorper metus. Sedsollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismodscelerisque ligula. Maecenas eu varius risus..</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="comment">
-          <img src="assets/comment-image-2.jpg" alt="User avatar" aria-hidden="true">
-          <div class="userComment">
-            <h4>Wednesday October 10th, 2019 by Renzo</h4>
-            <p>Donec viverra eleifend lacus, vitae ullamcorper metus. Sedsollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismodscelerisque ligula.</p>
+          
+          <div class="comment">
+            <img src="assets/comment-image-2.jpg" alt="User avatar" aria-hidden="true">
+            <div class="userComment">
+              <h5>Wednesday October 10th, 2019 by Renzo</h5>
+              <p>Donec viverra eleifend lacus, vitae ullamcorper metus. Sedsollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismodscelerisque ligula.</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="newComment">
-          <form action="">
-            <label for="name">Name</label>
-            <input type="name" id="name">
-            
-            <label for="email">Email address</label>
-            <input type="email" id="email">
-
-            <textarea name="commentBox" id="commentBox" cols="30" rows="10"></textarea>
-
-            <button type="submit">Post comment</button>
-          </form>
+          
+          <div class="newComment">
+            <form action="">
+              <label for="name">Name</label>
+              <input type="name" id="name">
+          
+              <label for="email">Email address</label>
+              <input type="email" id="email">
+              <textarea name="commentBox" id="commentBox" cols="30" rows="10"></textarea>
+              <button type="submit">Post comment</button>
+            </form>
+          </div>
         </div>
       </section>
       

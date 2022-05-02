@@ -77,10 +77,23 @@ header {
     font-size: 1.6rem;
     line-height: 1.6rem;
   }
-}
-.headerBox {
-  width: 50%;
-  position: absolute;
-  right: 0;
-  bottom: -70px;
+  .headerBox {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: -70px;
+  }
+  &.blogHeader {
+    background: url('../assets/blog-header-1.jpg') no-repeat center / cover;
+  }
+  .blogHeading {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-family: $chathura;
+      color: white;
+      text-align: left;
+    }
+  }
 }
