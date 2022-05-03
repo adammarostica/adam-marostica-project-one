@@ -4,9 +4,9 @@ aside {
     display: flex;
     align-items: flex-start;
     margin: 0 3vw;
-    width: 100%;
+    width: 94%;
     background: $darkred;
-    padding: 0 3vw 50px 0;
+    padding: 0 7vw 30px 0;
   }
   img {
     flex-basis: 40%;
@@ -102,5 +102,35 @@ section.comments {
       font-size: 2rem;
       margin-bottom: 10px;
     }
+  }
+  label {
+    display: block;
+  }
+  input {
+    display: block;
+    margin-bottom: -1px;
+    padding-left: 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $dustyorange;
+    background: transparent;
+    color: $offwhite;
+    transition: background .3s ease-out;
+    font-family: $chathura;
+  }
+  input:hover, :focus {
+    background: rgba($color: $dustyorange, $alpha: 0.1);
+    border: 1px solid rgba($color: $dustyorange, $alpha: 0.1);
+    box-shadow: 0 0 5px 1px $dustyorange;
+    outline: none;
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    margin: 20px 0;
+    padding-left: 10px;
+    border: 1px solid $dustyorange;
+    background: $black;
+    color: $offwhite;
+    font-family: $chathura;
   }
 }
