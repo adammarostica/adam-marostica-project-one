@@ -1,10 +1,11 @@
 aside {
-  transform: translateY(-20px);
+  position: relative;
+  top: -20px;
   .container {
     display: flex;
     align-items: flex-start;
-    margin: 0 3vw;
-    width: 94%;
+    margin: 0 auto;
+    width: 90%;
     background: $darkred;
     padding: 0 7vw 30px 0;
   }
@@ -12,8 +13,8 @@ aside {
     flex-basis: 40%;
     object-fit: contain;
     position: relative;
-    top: -3vw;
-    left: -3vw;
+    top: -5vw;
+    left: -5vw;
   }
   .wrapper {
     flex-basis: 60%;
@@ -42,11 +43,11 @@ aside {
 .blogAndComments {
   .img-wrapper {
     width: 97%;
-  }
-  img {
-    position: relative;
-    margin-left: 3%;
-    box-shadow: -3vw 3vw $dustyorange;
+    img {
+      position: relative;
+      margin-left: 3%;
+      box-shadow: -3vw 3vw $dustyorange;
+    }
   }
 
 }
@@ -55,17 +56,16 @@ article.blog {
   border-left: 3px solid $dustyorange;
   border-bottom: 3px solid $dustyorange;
   .wrapper {
-    width: 80%;
-    padding: 60px 0 40px;
-    
+    width: 75%;
+    padding: 70px 0 40px;
   }
-
   h2 {
     line-height: 1.5rem;
   }
   .datePublished {
     color: $dustyorange;
     font-size: 1.3rem;
+    margin: 0;
   }
   .blogPostContent {
     margin-top: 25px;
@@ -97,7 +97,7 @@ section.comments {
       margin-top: 5px;
     }
     .userComment {
-      flex-basis: 75%;
+      flex-basis: 77%;
     }
     h5 {
       color: $dustyorange;
@@ -148,5 +148,8 @@ section.comments {
   form {
     display: flex;
     flex-direction: column;
+    button {
+      width: 100%;
+    }
   }
 }

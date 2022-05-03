@@ -48,13 +48,11 @@
     width: 90%;
   }
   img:first-of-type {
-    position: relative;
-    top: -15px;
+    margin-top: -15px;
     box-shadow: 10px 10px $dustyorange;
   }
   img:last-of-type {
     box-shadow: -10px 10px $dustyorange;
-    position: relative;
   }
   .wrapper {
     width: 80%;

@@ -20,6 +20,9 @@
     .headerBox {
       bottom: -80px;
     }
+    &.blogHeader {
+      min-height: 50vh;
+    }
     .blogHeading h1 {
       font-size: 5rem;
     }
@@ -63,9 +66,6 @@
     .headerBox {
       bottom: -90px;
     }
-    &.blogHeader {
-      min-height: 50vh;
-    }
     .blogHeading h1 {
       font-size: 5rem;
     }
@@ -105,12 +105,12 @@
       flex-basis: 42%;
     }
     img:first-of-type {
-      top: -30px;
+      margin-top: -30px;
       box-shadow: 15px 15px $dustyorange;
     }
     img:last-of-type {
       order: 1;
-      bottom: -30px;
+      margin-bottom: -30px;
       box-shadow: -15px 15px $dustyorange;
     }
   }
@@ -160,26 +160,54 @@
       }
     }
   }
-  main {
+  main.blogMainContent {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   aside {
-    flex-basis: 25%;
-    transform: translateY(100px);
+    flex-basis: 33%;
+    max-width: 500px;
+    top: 100px;
+    height: 100%;
+    .container {
+      flex-direction: column;
+      padding: 0 20px 20px;
+      width: 80%;
+    }
     img {
-      flex-basis: 100%;
+      top: -20px;
+      left: calc(-3vw - 23px);
+      width: 122%;
+    }
+    li {
+      font-size: 1.5rem;
     }
   }
   .blogAndComments {
-    flex-basis: 60%;
+    flex-basis: 65%;
+    max-width: 1200px;
+    margin-top: -120px;
+    overflow: hidden;
     .img-wrapper {
       width: 98%;
+      img {
+        margin-left: 2%;
+        box-shadow: -1.5vw 1.5vw $dustyorange;
+      }
     }
-    img {
-      margin-left: 2%;
-      box-shadow: -1.18vw 1.18vw $dustyorange;
+  }
+  section.comments {
+    h4 {
+      margin-left: 5%;
+    }
+    .commentWrapper {
+      img {
+        flex-basis: 12%;
+      }
+      .userComment {
+        flex-basis: 85%;
+      }
     }
   }
 }
