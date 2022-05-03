@@ -24,9 +24,29 @@
       font-size: 5rem;
     }
   }
+  section.comments {
+    .commentWrapper {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    form {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .commenterName,
+    .commenterEmail {
+      flex-basis: 46%;
+    }
+    input {
+      border: 1px solid transparent;
+      border-bottom: 1px solid $dustyorange;
+    }
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $desktop) {
   header {
     min-height: 65vh;
     h1 {
@@ -138,6 +158,28 @@
       img {
         width: calc(95% / 3);
       }
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  aside {
+    flex-basis: 25%;
+    transform: translateY(100px);
+    img {
+      flex-basis: 100%;
+    }
+  }
+  .blogAndComments {
+    flex-basis: 60%;
+    .img-wrapper {
+      width: 98%;
+    }
+    img {
+      margin-left: 2%;
+      box-shadow: -1.18vw 1.18vw $dustyorange;
     }
   }
 }

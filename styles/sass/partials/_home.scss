@@ -111,7 +111,6 @@
 }
 
 .gallery {
-  width: 100vw;
   .wrapper {
     width: 100%;
     display: flex;
@@ -124,5 +123,5 @@
 footer {
   background: $grey;
   text-align: center;
-  padding: 10px;
+  line-height: normal;
 }
