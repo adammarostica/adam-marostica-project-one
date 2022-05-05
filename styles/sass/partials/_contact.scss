@@ -1,0 +1,33 @@
+.contactMainContent {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.contactInfo {
+  order: 1;
+
+}
+.contactForm {
+  background: $darkred;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    background: transparent;
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: transparent;
+    color: $offwhite;
+    font-family: $chathura;
+    border: 2px solid $offwhite;
+    &:hover, &:focus {
+      background: $offwhite;
+    }
+  }
+}

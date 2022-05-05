@@ -86,7 +86,8 @@ header {
   &.blogHeader {
     background: url('../assets/blog-header-1.jpg') no-repeat center / cover;
   }
-  .blogHeading {
+  .blogHeading,
+  .contactHeading {
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -95,6 +96,9 @@ header {
       color: white;
       text-align: left;
     }
+  }
+  &.contactHeader {
+    background: url('../assets/contact-header-1.jpg')
   }
   
 }

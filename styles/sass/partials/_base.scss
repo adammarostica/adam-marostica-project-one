@@ -20,16 +20,16 @@ img {
 button {
   border: none;
   padding: 2px 25px;
-  background: $rustred;
+  background: $rustred linear-gradient($dustyorange 0 0) right / 0 100% no-repeat;
   color: $offwhite;
   font-family: $tulpen;
   text-transform: capitalize;
   cursor: pointer;
-  transition: background .3s ease-out, border-radius .3s ease-out;
+  transition: background-size .3s ease-out, border-radius .3s ease-out;
   &:hover,
   &:focus {
-    background: $dustyorange;
-    border-radius: 5px;
+    background-size: 100% 100%;
+    background-position: left;
   }
   &:focus {
     outline: 3px solid $rustred;

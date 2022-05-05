@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&family=Tulpen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Home - Bar-One</title>
+  </head>
+  <body>
+    <header class="contactHeader">
+      <a href="#contactMainContent" class="skip-link">Skip to main content.</a>
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li class="navLogo"><a href="index.html" tabindex="-1">Bar-One</a></li>
+            <li class="navHome"><a href="index.html">Home</a></li>
+            <li class="navAbout"><a href="#about">About</a></li>
+            <li class="navBlog"><a href="blog.html">Blog</a></li>
+            <li class="navContact youAreHere"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="contactHeading">
+          <h1>Get in Touch</h1>
+        </div>
+      </div>
+    </header>
+
+    <main id="contactMainContent" class="contactMainContent">
+      <div class="wrapper">
+        <section class="contactInfo">
+          <ul class="socialIcons">
+            <li><i class="fa-brands fa-facebook-f"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-whatsapp"></i></li>
+          </ul>
+          <p class="contactEmail">info@email.com</p>
+          <ul class="phoneAndAddress">
+            <li>123 - 456 - 7890</li>
+            <li>123 Queen Street West, Unit 10</li>
+            <li>Toronto, Ontario</li>
+            <li>M5V2D5</li>
+          </ul>
+        </section>
+        <section class="contactForm">
+          <form action="#">
+            <div class="contactFormName">
+              <label class="sr-only" for="contactFormName">Name</label>
+              <input type="text" name="contactFormName" id="contactFormName" placeholder="Name">
+            </div>
+            <div class="contactFormEmail">
+              <label class="sr-only" for="contactFormEmail">Email address</label>
+              <input type="email" name="contactFormEmail" id="contactFormEmail" placeholder="Email address">
+            </div>
+            <textarea name="contactFormTextarea" id="contactFormTextarea" cols="30" rows="5" placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright © 2019 HackerYou</p>
+    </footer>
+  </body>
+</html>

@@ -302,17 +302,18 @@ img {
 button {
   border: none;
   padding: 2px 25px;
-  background: #bf2603;
+  background: #bf2603 -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff8327)) right/0 100% no-repeat;
+  background: #bf2603 linear-gradient(#ff8327 0 0) right/0 100% no-repeat;
   color: #fff;
   font-family: "Tulpen One", cursive;
   text-transform: capitalize;
   cursor: pointer;
-  -webkit-transition: background 0.3s ease-out, border-radius 0.3s ease-out;
-  transition: background 0.3s ease-out, border-radius 0.3s ease-out;
+  -webkit-transition: background-size 0.3s ease-out, border-radius 0.3s ease-out;
+  transition: background-size 0.3s ease-out, border-radius 0.3s ease-out;
 }
 button:hover, button:focus {
-  background: #ff8327;
-  border-radius: 5px;
+  background-size: 100% 100%;
+  background-position: left;
 }
 button:focus {
   outline: 3px solid #bf2603;
@@ -451,7 +452,8 @@ header .headerBox {
 header.blogHeader {
   background: url("../assets/blog-header-1.jpg") no-repeat center/cover;
 }
-header .blogHeading {
+header .blogHeading,
+header .contactHeading {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -462,10 +464,14 @@ header .blogHeading {
       -ms-flex-align: center;
           align-items: center;
 }
-header .blogHeading h1 {
+header .blogHeading h1,
+header .contactHeading h1 {
   font-family: "Chathura", Arial, Helvetica, sans-serif;
   color: white;
   text-align: left;
+}
+header.contactHeader {
+  background: url("../assets/contact-header-1.jpg");
 }
 
 .spaces {
@@ -481,7 +487,7 @@ header .blogHeading h1 {
   display: flex;
 }
 .spaces .space:last-of-type {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .spaces span {
   display: block;
@@ -738,7 +744,8 @@ section.comments input {
   width: 100%;
   margin-bottom: 30px;
   padding-left: 10px;
-  border: 1px solid #ff8327;
+  border: 1px solid rgba(255, 131, 39, 0.2);
+  border-bottom: 1px solid #ff8327;
   background: transparent;
   color: #fff;
   -webkit-transition: background 0.3s ease-out;
@@ -758,7 +765,7 @@ section.comments textarea {
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ff8327;
-  background: #111010;
+  background: transparent;
   color: #fff;
   font-family: "Chathura", Arial, Helvetica, sans-serif;
 }
@@ -797,6 +804,51 @@ section.comments form button {
   width: 100%;
 }
 
+.contactMainContent .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactInfo {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.contactForm {
+  background: #220303;
+}
+.contactForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactForm input {
+  background: transparent;
+}
+.contactForm textarea {
+  resize: none;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: transparent;
+  color: #fff;
+  font-family: "Chathura", Arial, Helvetica, sans-serif;
+  border: 2px solid #fff;
+}
+.contactForm textarea:hover, .contactForm textarea:focus {
+  background: #fff;
+}
+
 @media (min-width: 481px) {
   header {
     min-height: 50vh;
@@ -820,10 +872,11 @@ section.comments form button {
   header .headerBox {
     bottom: -80px;
   }
-  header.blogHeader {
+  header.blogHeader, header.contactHeader {
     min-height: 50vh;
   }
-  header .blogHeading h1 {
+  header .blogHeading h1,
+header .contactHeading h1 {
     font-size: 5rem;
   }
 
@@ -921,8 +974,8 @@ section.comments .commenterEmail {
   }
   .readMore img,
 .readMore div {
-    -ms-flex-preferred-size: 42%;
-        flex-basis: 42%;
+    -ms-flex-preferred-size: 43%;
+        flex-basis: 43%;
   }
   .readMore img:first-of-type {
     margin-top: -30px;
