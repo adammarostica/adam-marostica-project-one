@@ -20,19 +20,39 @@ img {
 button {
   border: none;
   padding: 2px 25px;
-  background: $rustred linear-gradient($dustyorange 0 0) right / 0 100% no-repeat;
+  background: $rustred;
   color: $offwhite;
   font-family: $tulpen;
   text-transform: capitalize;
   cursor: pointer;
-  transition: background-size .3s ease-out, border-radius .3s ease-out;
+  transition: box-shadow .3s ease-out;
   &:hover,
   &:focus {
-    background-size: 100% 100%;
-    background-position: left;
+    box-shadow: -6px 6px $dustyorange;
   }
-  &:focus {
-    outline: 3px solid $rustred;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  background-color: transparent;
+  color: $offwhite;
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out;
+  font-family: $chathura;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: transparent;
+  color: $offwhite;
+  font-family: $chathura;
+  transition: background .3s ease-out, box-shadow .3s ease-out, border .3s ease-out;
+  &:hover {
+    outline: none;
   }
 }
 

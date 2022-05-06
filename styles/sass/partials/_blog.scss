@@ -105,21 +105,20 @@ section.comments {
       margin-bottom: 10px;
     }
   }
+  form {
+    display: flex;
+    flex-direction: column;
+    button {
+      width: 100%;
+    }
+  }
   label {
     display: block;
     margin-left: 20px;
   }
   input {
-    display: block;
-    width: 100%;
-    margin-bottom: 30px;
-    padding-left: 10px;
     border: 1px solid rgba($color: $dustyorange, $alpha: 0.2);
     border-bottom: 1px solid $dustyorange;
-    background: transparent;
-    color: $offwhite;
-    transition: background .3s ease-out;
-    font-family: $chathura;
     &:hover, &:focus {
       background: rgba($color: $dustyorange, $alpha: 0.1);
       border: 1px solid rgba($color: $dustyorange, $alpha: 0.1);
@@ -128,14 +127,7 @@ section.comments {
     }
   }
   textarea {
-    resize: none;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 20px;
     border: 1px solid $dustyorange;
-    background: transparent;
-    color: $offwhite;
-    font-family: $chathura;
     &::placeholder {
       opacity: 1;
     }
@@ -143,14 +135,6 @@ section.comments {
       background: rgba($color: $dustyorange, $alpha: 0.1);
       border: 1px solid rgba($color: $dustyorange, $alpha: 0.1);
       box-shadow: 0 0 5px 1px $dustyorange;
-      outline: none;
-    }
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    button {
-      width: 100%;
     }
   }
 }

@@ -302,21 +302,49 @@ img {
 button {
   border: none;
   padding: 2px 25px;
-  background: #bf2603 -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff8327)) right/0 100% no-repeat;
-  background: #bf2603 linear-gradient(#ff8327 0 0) right/0 100% no-repeat;
+  background: #bf2603;
   color: #fff;
   font-family: "Tulpen One", cursive;
   text-transform: capitalize;
   cursor: pointer;
-  -webkit-transition: background-size 0.3s ease-out, border-radius 0.3s ease-out;
-  transition: background-size 0.3s ease-out, border-radius 0.3s ease-out;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-out;
+  transition: -webkit-box-shadow 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
 }
 button:hover, button:focus {
-  background-size: 100% 100%;
-  background-position: left;
+  -webkit-box-shadow: -6px 6px #ff8327;
+          box-shadow: -6px 6px #ff8327;
 }
-button:focus {
-  outline: 3px solid #bf2603;
+
+input {
+  width: 100%;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  background-color: transparent;
+  color: #fff;
+  -webkit-transition: background 0.3s ease-out, border 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+  transition: background 0.3s ease-out, border 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out;
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+  font-family: "Chathura", Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: transparent;
+  color: #fff;
+  font-family: "Chathura", Arial, Helvetica, sans-serif;
+  -webkit-transition: background 0.3s ease-out, border 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+  transition: background 0.3s ease-out, border 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out;
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+}
+textarea:hover {
+  outline: none;
 }
 
 nav {
@@ -379,7 +407,7 @@ header nav a {
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
 }
-header nav a:hover {
+header nav a:hover, header nav a:focus {
   color: #ff8327;
 }
 header nav .navHome {
@@ -735,22 +763,25 @@ section.comments .commentWrapper h5 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
+section.comments form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section.comments form button {
+  width: 100%;
+}
 section.comments label {
   display: block;
   margin-left: 20px;
 }
 section.comments input {
-  display: block;
-  width: 100%;
-  margin-bottom: 30px;
-  padding-left: 10px;
   border: 1px solid rgba(255, 131, 39, 0.2);
   border-bottom: 1px solid #ff8327;
-  background: transparent;
-  color: #fff;
-  -webkit-transition: background 0.3s ease-out;
-  transition: background 0.3s ease-out;
-  font-family: "Chathura", Arial, Helvetica, sans-serif;
 }
 section.comments input:hover, section.comments input:focus {
   background: rgba(255, 131, 39, 0.1);
@@ -760,14 +791,7 @@ section.comments input:hover, section.comments input:focus {
   outline: none;
 }
 section.comments textarea {
-  resize: none;
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 20px;
   border: 1px solid #ff8327;
-  background: transparent;
-  color: #fff;
-  font-family: "Chathura", Arial, Helvetica, sans-serif;
 }
 section.comments textarea::-webkit-input-placeholder {
   opacity: 1;
@@ -789,21 +813,43 @@ section.comments textarea:hover, section.comments textarea:focus {
   border: 1px solid rgba(255, 131, 39, 0.1);
   -webkit-box-shadow: 0 0 5px 1px #ff8327;
           box-shadow: 0 0 5px 1px #ff8327;
-  outline: none;
-}
-section.comments form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-section.comments form button {
-  width: 100%;
 }
 
+@-webkit-keyframes instagramTransition {
+  0% {
+    color: #f09433;
+  }
+  25% {
+    color: #e6683c;
+  }
+  50% {
+    color: #dc2743;
+  }
+  75% {
+    color: #cc2366;
+  }
+  100% {
+    color: #bc1888;
+  }
+}
+
+@keyframes instagramTransition {
+  0% {
+    color: #f09433;
+  }
+  25% {
+    color: #e6683c;
+  }
+  50% {
+    color: #dc2743;
+  }
+  75% {
+    color: #cc2366;
+  }
+  100% {
+    color: #bc1888;
+  }
+}
 .contactMainContent .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -815,13 +861,46 @@ section.comments form button {
 }
 
 .contactInfo {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  margin: 50px 0 50px 30px;
+}
+.contactInfo .socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contactInfo .contactEmail {
+  margin: 10px 0;
+}
+.contactInfo i {
+  -webkit-transition: color 0.3s ease-out, -webkit-animation 0.3s ease-out;
+  transition: color 0.3s ease-out, -webkit-animation 0.3s ease-out;
+  transition: color 0.3s ease-out, animation 0.3s ease-out;
+  transition: color 0.3s ease-out, animation 0.3s ease-out, -webkit-animation 0.3s ease-out;
+}
+.contactInfo .fa-facebook-f:hover, .contactInfo .fa-facebook-f:focus {
+  color: #2374e1;
+}
+.contactInfo .fa-instagram:hover, .contactInfo .fa-instagram:focus {
+  color: #bc1888;
+}
+.contactInfo .fa-twitter:hover, .contactInfo .fa-twitter:focus {
+  color: #1d9bf0;
+}
+.contactInfo .fa-whatsapp:hover, .contactInfo .fa-whatsapp:focus {
+  color: #25D366;
 }
 
 .contactForm {
+  margin-top: -20px;
   background: #220303;
+  z-index: 10;
+  padding: 30px;
+  -webkit-box-shadow: 2vw 2vw #ff8327;
+          box-shadow: 2vw 2vw #ff8327;
 }
 .contactForm form {
   display: -webkit-box;
@@ -832,21 +911,53 @@ section.comments form button {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.contactForm form button {
+  width: 100%;
+}
 .contactForm input {
-  background: transparent;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #fff;
+}
+.contactForm input:hover, .contactForm input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 0 5px 1px #fff;
+          box-shadow: 0 0 5px 1px #fff;
+  outline: none;
+}
+.contactForm .contactFormName,
+.contactForm .contactFormEmail {
+  position: relative;
+}
+.contactForm .contactFormName::before, .contactForm .contactFormName::after,
+.contactForm .contactFormEmail::before,
+.contactForm .contactFormEmail::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  bottom: 30px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.contactForm .contactFormName::after,
+.contactForm .contactFormEmail::after {
+  right: 1px;
+}
+.contactForm .contactFormName:hover::before, .contactForm .contactFormName:hover::after,
+.contactForm .contactFormEmail:hover::before,
+.contactForm .contactFormEmail:hover::after {
+  background: rgba(255, 255, 255, 0);
 }
 .contactForm textarea {
-  resize: none;
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 20px;
-  background: transparent;
-  color: #fff;
-  font-family: "Chathura", Arial, Helvetica, sans-serif;
   border: 2px solid #fff;
 }
 .contactForm textarea:hover, .contactForm textarea:focus {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 0 5px 1px #fff;
+          box-shadow: 0 0 5px 1px #fff;
 }
 
 @media (min-width: 481px) {
@@ -888,10 +999,8 @@ header .contactHeading h1 {
   section.comments form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -904,6 +1013,21 @@ section.comments .commenterEmail {
   section.comments input {
     border: 1px solid transparent;
     border-bottom: 1px solid #ff8327;
+  }
+
+  section.contactForm form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.contactForm .contactFormName,
+section.contactForm .contactFormEmail {
+    -ms-flex-preferred-size: 46%;
+        flex-basis: 46%;
   }
 }
 @media (min-width: 769px) {

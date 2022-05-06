@@ -1,3 +1,21 @@
+@keyframes instagramTransition {
+  0% {
+    color: #f09433;
+  }
+  25% {
+    color: #e6683c;
+  }
+  50% {
+    color: #dc2743;
+  }
+  75% {
+    color: #cc2366;
+  }
+  100% {
+    color: #bc1888;
+  }
+}
+
 .contactMainContent {
   .wrapper {
     display: flex;
@@ -5,29 +23,92 @@
   }
 }
 .contactInfo {
-  order: 1;
-
+  margin: 50px 0 50px 30px;
+  .socialIcons {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+  }
+  .contactEmail {
+    margin: 10px 0;
+  }
+  i {
+    transition: color .3s ease-out, animation .3s ease-out;
+  }
+  .fa-facebook-f {
+    &:hover, &:focus {
+      color: #2374e1;
+    }
+  }
+  .fa-instagram {
+    &:hover, &:focus {
+      color: #bc1888;
+    }
+  }
+  .fa-twitter {
+    &:hover, &:focus {
+      color: #1d9bf0;
+    }
+  }
+  .fa-whatsapp {
+    &:hover, &:focus {
+      color: #25D366;
+    }
+  }
 }
 .contactForm {
+  margin-top: -20px;
   background: $darkred;
+  z-index: 10;
+  padding: 30px;
+  box-shadow: 2vw 2vw $dustyorange;
   form {
     display: flex;
     flex-direction: column;
+    button {
+      width: 100%;
+    }
   }
   input {
-    background: transparent;
+    border: 2px solid transparent;
+    border-bottom: 2px solid $offwhite;
+    &:hover, &:focus {
+      background: rgba($color: $offwhite, $alpha: 0.1);
+      border: 2px solid rgba($color: $offwhite, $alpha: 0.1);
+      box-shadow: 0 0 5px 1px $offwhite;
+      outline: none;
+    }
+  }
+  // before and after elements to 'square off' the input bottom borders.
+  .contactFormName,
+  .contactFormEmail {
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: $offwhite;
+      bottom: 30px;
+      transition: background .3s;
+    }
+    &::after {
+      right: 1px;
+    }
+    &:hover {
+     &::before,
+     &::after {
+      background:rgba($color: $offwhite, $alpha: 0);
+     }
+    }
   }
   textarea {
-    resize: none;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 20px;
-    background: transparent;
-    color: $offwhite;
-    font-family: $chathura;
     border: 2px solid $offwhite;
     &:hover, &:focus {
-      background: $offwhite;
+      background: rgba($color: $offwhite, $alpha: 0.1);
+      border: 2px solid rgba($color: $offwhite, $alpha: 0.1);
+      box-shadow: 0 0 5px 1px $offwhite;
     }
   }
 }

@@ -36,8 +36,7 @@
       margin-right: auto;
     }
     form {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       justify-content: space-between;
     }
     .commenterName,
@@ -47,6 +46,16 @@
     input {
       border: 1px solid transparent;
       border-bottom: 1px solid $dustyorange;
+    }
+  }
+  section.contactForm {
+    form {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    .contactFormName,
+    .contactFormEmail {
+      flex-basis: 46%;
     }
   }
 }
