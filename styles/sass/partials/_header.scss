@@ -14,10 +14,10 @@ header {
     padding-top: 10px;
     z-index: 1;
     ul {
-      width: 100%;
-      max-width: 600px;
       display: flex;
       justify-content: space-between;
+      width: 100%;
+      max-width: 600px;
       font-size: 1.5rem;
     }
     li {
@@ -25,33 +25,22 @@ header {
     }
     a {
       padding: 10px 9px;
-      transition: color .3s ease-out;
+      transition: color .3s ease-out, transform .3s ease-out;
       &:hover, &:focus {
         color: $dustyorange;
+        transform: translateY(5px);
       }
     }
-    .navHome {
-      order: 1;
-    }
-    .navAbout {
-      order: 2
-    }
     .navLogo {
-      order: 3;
-      font-family: $tulpen;
-      text-transform: capitalize;
       display: none;
+      font-family: $tulpen;
       font-weight: 400;
+      text-transform: capitalize;
       a { 
         font-size: 3rem;
       }
     }
-    .navBlog {
-      order: 4;
-    }
-    .navContact {
-      order: 5;
-    }
+    // Colour the nav link of the page the user is currently on
     .youAreHere a {
       color: $dustyorange;
     }
@@ -76,14 +65,18 @@ header {
     font-size: 1.6rem;
     line-height: 1.6rem;
   }
+  // Control the position of the wine glass image on the home header
   .headerBox {
-    width: 50%;
-    position: absolute;
     right: 0;
     bottom: -70px;
+    width: 50%;
+    position: absolute;
   }
   &.blogHeader {
     background: url('../assets/blog-header-1.jpg') no-repeat center / cover;
+  }
+  &.contactHeader {
+    background: url('../assets/contact-header-1.jpg')
   }
   .blogHeading,
   .contactHeading {
@@ -96,8 +89,4 @@ header {
       text-align: left;
     }
   }
-  &.contactHeader {
-    background: url('../assets/contact-header-1.jpg')
-  }
-  
 }

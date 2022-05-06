@@ -1,21 +1,3 @@
-@keyframes instagramTransition {
-  0% {
-    color: #f09433;
-  }
-  25% {
-    color: #e6683c;
-  }
-  50% {
-    color: #dc2743;
-  }
-  75% {
-    color: #cc2366;
-  }
-  100% {
-    color: #bc1888;
-  }
-}
-
 .contactMainContent {
   .wrapper {
     display: flex;
@@ -26,14 +8,34 @@
   margin: 50px 0 50px 30px;
   .socialIcons {
     display: flex;
-    width: 200px;
     justify-content: space-between;
+    width: 200px;
   }
   .contactEmail {
     margin: 10px 0;
+    transition: color .3s ease-out;
+    &:hover, &:focus {
+    color: $dustyorange;
+    }
   }
-  i {
+  .fa-brands {
     transition: color .3s ease-out, animation .3s ease-out;
+  }
+  .socialIcons a {
+    &:hover, &:focus {
+      .fa-facebook-f {
+        color: #2374e1;
+      }
+      .fa-instagram {
+        color: #bc1888;
+      }
+      .fa-twitter {
+        color: #1d9bf0;
+      }
+      .fa-whatsapp {
+        color: #25D366;
+      }
+    }
   }
   .fa-facebook-f {
     &:hover, &:focus {
@@ -58,10 +60,10 @@
 }
 .contactForm {
   margin-top: -20px;
-  background: $darkred;
-  z-index: 10;
   padding: 30px;
   box-shadow: 2vw 2vw $dustyorange;
+  background: $darkred;
+  z-index: 10;
   form {
     display: flex;
     flex-direction: column;
@@ -74,40 +76,40 @@
     border-bottom: 2px solid $offwhite;
     &:hover, &:focus {
       background: rgba($color: $offwhite, $alpha: 0.1);
-      border: 2px solid rgba($color: $offwhite, $alpha: 0.1);
+      border: 2px solid transparent;
       box-shadow: 0 0 5px 1px $offwhite;
       outline: none;
     }
   }
   // before and after elements to 'square off' the input bottom borders.
-  .contactFormName,
-  .contactFormEmail {
-    position: relative;
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: $offwhite;
-      bottom: 30px;
-      transition: background .3s;
-    }
-    &::after {
-      right: 1px;
-    }
-    &:hover {
-     &::before,
-     &::after {
-      background:rgba($color: $offwhite, $alpha: 0);
-     }
-    }
-  }
+  // .contactFormName,
+  // .contactFormEmail {
+  //   position: relative;
+  //   &::before,
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     width: 2px;
+  //     height: 2px;
+  //     background: $offwhite;
+  //     bottom: 30px;
+  //     transition: background .3s;
+  //   }
+  //   &:hover {
+  //    &::before,
+  //    &::after {
+  //     background:rgba($color: $offwhite, $alpha: 0);
+  //    }
+  //   }
+  //   &::after {
+  //     right: 1px;
+  //   }
+  // }
   textarea {
     border: 2px solid $offwhite;
     &:hover, &:focus {
       background: rgba($color: $offwhite, $alpha: 0.1);
-      border: 2px solid rgba($color: $offwhite, $alpha: 0.1);
+      border: 2px solid transparent;
       box-shadow: 0 0 5px 1px $offwhite;
     }
   }

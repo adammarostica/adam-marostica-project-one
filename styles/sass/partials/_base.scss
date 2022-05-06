@@ -1,10 +1,16 @@
+* {
+  &:focus {
+    outline: 2px solid $dustyorange;
+  }
+}
+
 .skip-link {
   position: absolute;
   left: -1000px;
   top: 5px;
-  z-index: 999;
   background: white;
   color: black;
+  z-index: 999;
   &:focus {
     left: 0;
   }
@@ -18,17 +24,17 @@ img {
 }
 
 button {
-  border: none;
   padding: 2px 25px;
+  border: none;
   background: $rustred;
   color: $offwhite;
   font-family: $tulpen;
   text-transform: capitalize;
-  cursor: pointer;
   transition: box-shadow .3s ease-out;
+  cursor: pointer;
   &:hover,
   &:focus {
-    box-shadow: -6px 6px $dustyorange;
+    box-shadow: 6px 6px $dustyorange;
   }
 }
 
@@ -38,20 +44,20 @@ input {
   padding-left: 10px;
   background-color: transparent;
   color: $offwhite;
-  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out;
   font-family: $chathura;
+  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out;
 }
 
 textarea {
-  resize: none;
   width: 100%;
   margin-bottom: 20px;
   padding: 20px;
   background: transparent;
   color: $offwhite;
   font-family: $chathura;
+  resize: none;
   transition: background .3s ease-out, box-shadow .3s ease-out, border .3s ease-out;
-  &:hover {
+  &:hover, &:focus {
     outline: none;
   }
 }
