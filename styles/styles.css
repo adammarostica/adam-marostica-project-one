@@ -588,7 +588,7 @@ header .contactHeading h1 {
 }
 
 .events {
-  padding: 50px 0;
+  padding: 60px 0;
 }
 .events .wrapper {
   width: 80%;
@@ -629,7 +629,7 @@ aside {
   position: relative;
   top: -20px;
 }
-aside .container {
+aside .asideContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1068,7 +1068,7 @@ section.contactForm .contactFormEmail {
   }
 
   .events {
-    padding: 40px 0;
+    padding: 80px 0;
   }
   .events .wrapper {
     display: -webkit-box;
@@ -1132,7 +1132,7 @@ section.contactForm .contactFormEmail {
     top: 100px;
     height: 100%;
   }
-  aside .container {
+  aside .asideContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
