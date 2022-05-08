@@ -306,19 +306,26 @@ img {
 button {
   padding: 2px 25px;
   border: none;
-  background: #bf2603;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff8327));
+  background-image: linear-gradient(#ff8327 0 0);
+  background-size: 100% 0%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: #bf2603;
   color: #fff;
   font-family: "Tulpen One", cursive;
   text-transform: capitalize;
-  -webkit-transition: -webkit-box-shadow 0.3s ease-out;
-  transition: -webkit-box-shadow 0.3s ease-out;
-  transition: box-shadow 0.3s ease-out;
-  transition: box-shadow 0.3s ease-out, -webkit-box-shadow 0.3s ease-out;
+  -webkit-transition: background-size 0.3s ease-out, text-shadow 0.3s ease-out, -webkit-box-shadow 0.4s ease-out;
+  transition: background-size 0.3s ease-out, text-shadow 0.3s ease-out, -webkit-box-shadow 0.4s ease-out;
+  transition: box-shadow 0.4s ease-out, background-size 0.3s ease-out, text-shadow 0.3s ease-out;
+  transition: box-shadow 0.4s ease-out, background-size 0.3s ease-out, text-shadow 0.3s ease-out, -webkit-box-shadow 0.4s ease-out;
   cursor: pointer;
 }
 button:hover, button:focus {
-  -webkit-box-shadow: 6px 6px #ff8327;
-          box-shadow: 6px 6px #ff8327;
+  background-size: 100% 100%;
+  -webkit-box-shadow: 6px 6px #bf2603;
+          box-shadow: 6px 6px #bf2603;
+  text-shadow: 1px 1px 1px #111010;
 }
 
 input {

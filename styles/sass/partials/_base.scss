@@ -26,15 +26,21 @@ img {
 button {
   padding: 2px 25px;
   border: none;
-  background: $rustred;
+  background-image: linear-gradient($dustyorange 0 0);
+  background-size: 100% 0%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: $rustred;
   color: $offwhite;
   font-family: $tulpen;
   text-transform: capitalize;
-  transition: box-shadow .3s ease-out;
+  transition: box-shadow .4s ease-out, background-size .3s ease-out, text-shadow .3s ease-out;
   cursor: pointer;
   &:hover,
   &:focus {
-    box-shadow: 6px 6px $dustyorange;
+    background-size: 100% 100%;
+    box-shadow: 6px 6px $rustred;
+    text-shadow: 1px 1px $black;
   }
 }
 
