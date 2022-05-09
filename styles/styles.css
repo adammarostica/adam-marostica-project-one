@@ -325,7 +325,7 @@ button:hover, button:focus {
   background-size: 100% 100%;
   -webkit-box-shadow: 6px 6px #bf2603;
           box-shadow: 6px 6px #bf2603;
-  text-shadow: 1px 1px 1px #111010;
+  text-shadow: 1px 1px #111010;
 }
 
 input {
@@ -491,7 +491,6 @@ header .blogHeading h1,
 header .contactHeading h1 {
   font-family: "Chathura", Arial, Helvetica, sans-serif;
   color: white;
-  text-align: left;
 }
 
 .spaces {
@@ -510,7 +509,6 @@ header .contactHeading h1 {
   margin-bottom: 80px;
 }
 .spaces span {
-  display: block;
   margin-right: 10px;
   font-size: 1.5rem;
 }
@@ -1039,11 +1037,11 @@ section.contactForm .contactFormEmail {
     padding-right: 10vw;
   }
   .readMore .wrapper:last-of-type {
-    text-align: right;
+    text-align: end;
     padding-left: 10vw;
   }
   .readMore .wrapper:last-of-type p {
-    text-align: left;
+    text-align: start;
   }
   .readMore img,
 .readMore div {

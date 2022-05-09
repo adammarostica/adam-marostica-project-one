@@ -104,10 +104,10 @@
         padding-right: 10vw;
       }
       &:last-of-type {
-        text-align: right;
+        text-align: end;
         padding-left: 10vw;
         p {
-          text-align: left;
+          text-align: start;
         }
       }
     }
