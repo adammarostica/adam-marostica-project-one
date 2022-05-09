@@ -494,29 +494,20 @@ header .contactHeading h1 {
 }
 
 .spaces {
-  margin-top: 80px;
+  margin: 80px 0;
 }
 .spaces .wrapper {
   width: 85%;
 }
 .spaces .space {
-  margin-top: 50px;
+  margin-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.spaces .space:last-of-type {
-  margin-bottom: 80px;
-}
 .spaces span {
   margin-right: 10px;
   font-size: 1.5rem;
-}
-.spaces a:hover h2, .spaces a:focus h2 {
-  color: #ff8327;
-}
-.spaces a:hover > span > .fa-stack-2x, .spaces a:focus > span > .fa-stack-2x {
-  color: #ff8327;
 }
 .spaces .fa-stack-2x {
   color: #bf2603;
@@ -525,12 +516,26 @@ header .contactHeading h1 {
   transition: color 0.3s ease-out, transform 0.3s ease-out;
   transition: color 0.3s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
-.spaces .fa-stack-2x:hover, .spaces .fa-stack-2x:focus {
-  color: #ff8327;
+.spaces .fa-stack-1x {
+  -webkit-transition: text-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: text-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, text-shadow 0.3s ease-out;
+  transition: transform 0.3s ease-out, text-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 .spaces h2 {
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
+}
+.spaces a:hover h2, .spaces a:focus h2 {
+  color: #ff8327;
+}
+.spaces a:hover > span > .fa-stack-2x, .spaces a:focus > span > .fa-stack-2x {
+  color: #ff8327;
+}
+.spaces a:hover > span > .fa-stack-1x, .spaces a:focus > span > .fa-stack-1x {
+  -webkit-transform: translate(-1px, -1px);
+          transform: translate(-1px, -1px);
+  text-shadow: 2px 2px #111010;
 }
 
 .readMore {

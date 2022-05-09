@@ -1,20 +1,30 @@
 .spaces {
-  margin-top: 80px;
+  margin: 80px 0;
   .wrapper {
     width: 85%;
   }
   .space {
-    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
   }
-  .space:last-of-type {
-    margin-bottom: 80px;
-  }
   span {
-    // display: block;
     margin-right: 10px;
     font-size: 1.5rem;
   }
+  // "Spaces" link hover transition rules
+    // FontAwesome circle backing
+  .fa-stack-2x {
+    color: $rustred;
+    transition: color .3s ease-out, transform .3s ease-out;
+  }
+    //FontAwesome icons proper
+  .fa-stack-1x {
+    transition: transform .3s ease-out, text-shadow .3s ease-out;
+  }
+  h2 {
+    transition: color .3s ease-out;
+  }
+  // Hover and focus rules for all anchors
   a {
     &:hover,
     &:focus {
@@ -24,18 +34,11 @@
       & > span > .fa-stack-2x {
         color: $dustyorange;
       }
+      & > span > .fa-stack-1x {
+        transform: translate(-1px, -1px);
+        text-shadow: 2px 2px $black;
+      }
     }
-  }
-  .fa-stack-2x {
-    color: $rustred;
-    transition: color .3s ease-out, transform .3s ease-out;
-    &:hover,
-    &:focus {
-      color: $dustyorange;
-    }
-  }
-  h2 {
-    transition: color .3s ease-out;
   }
 }
 

@@ -1,0 +1,61 @@
+@media (min-width: $tablet) {
+  header {
+    min-height: 50vh;
+    nav {
+      padding-top: 15px;
+      .navLogo {
+        display: block;
+      }
+    }
+    h1 {
+      font-size: 9rem;
+      line-height: 9rem;
+    }
+    span {
+      font-size: 2.9rem;
+      line-height: 2.9rem;
+      top: -42px;
+      left: -53px;
+    }
+    .headerBox {
+      bottom: -80px;
+    }
+    &.blogHeader,
+    &.contactHeader {
+      min-height: 50vh;
+    }
+    .blogHeading h1,
+    .contactHeading h1 {
+      font-size: 5rem;
+    }
+  }
+  section.comments {
+    .commentWrapper {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    form {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    .commenterName,
+    .commenterEmail {
+      flex-basis: 46%;
+    }
+    input {
+      border: 1px solid transparent;
+      border-bottom: 1px solid $dustyorange;
+    }
+  }
+  section.contactForm {
+    form {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    .contactFormName,
+    .contactFormEmail {
+      flex-basis: 46%;
+    }
+  }
+}

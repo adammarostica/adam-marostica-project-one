@@ -81,30 +81,6 @@
       outline: none;
     }
   }
-  // before and after elements to 'square off' the input bottom borders.
-  // .contactFormName,
-  // .contactFormEmail {
-  //   position: relative;
-  //   &::before,
-  //   &::after {
-  //     content: '';
-  //     position: absolute;
-  //     width: 2px;
-  //     height: 2px;
-  //     background: $offwhite;
-  //     bottom: 30px;
-  //     transition: background .3s;
-  //   }
-  //   &:hover {
-  //    &::before,
-  //    &::after {
-  //     background:rgba($color: $offwhite, $alpha: 0);
-  //    }
-  //   }
-  //   &::after {
-  //     right: 1px;
-  //   }
-  // }
   textarea {
     border: 2px solid $offwhite;
     &:hover, &:focus {
