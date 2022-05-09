@@ -635,18 +635,17 @@ aside {
   top: -20px;
 }
 aside .asideContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 0 auto;
-  padding: 0 7vw 30px 0;
+  padding: 10px;
   width: 90%;
   background: #220303;
 }
 aside img {
+  display: none;
   position: relative;
   top: -5vw;
   left: -5vw;
@@ -907,6 +906,17 @@ section.comments textarea:hover, section.comments textarea:focus {
           box-shadow: 0 0 5px 1px #fff;
 }
 
+@media (min-width: 420px) {
+  aside .asideContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 7vw 30px 0;
+  }
+  aside img {
+    display: block;
+  }
+}
 @media (min-width: 481px) {
   header {
     min-height: 50vh;
@@ -1205,8 +1215,8 @@ section.contactForm .contactFormEmail {
   }
 
   .contactInfo {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
     -ms-flex-item-align: center;
         align-self: center;
   }
