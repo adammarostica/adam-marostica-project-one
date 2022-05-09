@@ -15,7 +15,8 @@ aside {
     top: -5vw;
     left: -5vw;
     flex-basis: 40%;
-    object-fit: contain;
+    width: 40%;
+    object-fit: cover;
   }
   .wrapper {
     flex-basis: 60%;

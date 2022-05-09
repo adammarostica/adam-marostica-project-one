@@ -651,8 +651,9 @@ aside img {
   left: -5vw;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 aside .wrapper {
   -ms-flex-preferred-size: 60%;
