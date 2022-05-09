@@ -9,13 +9,14 @@ aside {
     width: 90%;
     background: $darkred;
   }
+  .img-wrapper {
+    flex-basis: 40%;
+  }
   img {
     display: none;
     position: relative;
     top: -5vw;
     left: -5vw;
-    flex-basis: 40%;
-    width: 40%;
     object-fit: cover;
   }
   .wrapper {
