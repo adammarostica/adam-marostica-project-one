@@ -645,8 +645,8 @@ aside .asideContainer {
   background: #220303;
 }
 aside .img-wrapper {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 aside img {
   display: none;
