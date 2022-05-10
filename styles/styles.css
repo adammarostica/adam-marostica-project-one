@@ -280,7 +280,7 @@ a {
 }
 
 *:focus {
-  outline: 2px solid #ff8327;
+  outline: none;
 }
 
 html {
