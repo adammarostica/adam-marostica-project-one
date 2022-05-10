@@ -19,7 +19,7 @@
   }
     //FontAwesome icons proper
   .fa-stack-1x {
-    transition: transform .3s ease-out, text-shadow .3s ease-out;
+    transition: text-shadow .3s ease-out;
   }
   h2 {
     transition: color .3s ease-out;
@@ -35,7 +35,6 @@
         color: $dustyorange;
       }
       & > span > .fa-stack-1x {
-        transform: translate(-1px, -1px);
         text-shadow: 2px 2px $black;
       }
     }

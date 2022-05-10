@@ -4,6 +4,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .skip-link {
   position: absolute;
   left: -1000px;
@@ -51,7 +55,7 @@ input {
   background-color: transparent;
   color: $offwhite;
   font-family: $chathura;
-  transition: background 0.3s ease-out, box-shadow 0.3s ease-out, border 0.3s ease-out;
+  transition: background .3s ease-out, box-shadow .3s ease-out, border .3s ease-out;
 }
 
 textarea {

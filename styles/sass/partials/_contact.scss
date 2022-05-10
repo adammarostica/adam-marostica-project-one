@@ -13,16 +13,18 @@
   }
   .contactEmail {
     margin: 10px 0;
-    transition: color .3s ease-out;
-    &:hover, &:focus {
-    color: $dustyorange;
+    transition: color 0.3s ease-out;
+    &:hover,
+    &:focus {
+      color: $dustyorange;
     }
   }
   .fa-brands {
-    transition: color .3s ease-out, animation .3s ease-out;
+    transition: color 0.3s ease-out, animation 0.3s ease-out;
   }
   .socialIcons a {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       .fa-facebook-f {
         color: #2374e1;
       }
@@ -33,28 +35,32 @@
         color: #1d9bf0;
       }
       .fa-whatsapp {
-        color: #25D366;
+        color: #25d366;
       }
     }
   }
   .fa-facebook-f {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: #2374e1;
     }
   }
   .fa-instagram {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: #bc1888;
     }
   }
   .fa-twitter {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: #1d9bf0;
     }
   }
   .fa-whatsapp {
-    &:hover, &:focus {
-      color: #25D366;
+    &:hover,
+    &:focus {
+      color: #25d366;
     }
   }
 }
@@ -74,7 +80,8 @@
   input {
     border: 2px solid transparent;
     border-bottom: 2px solid $offwhite;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: rgba($color: $offwhite, $alpha: 0.1);
       border: 2px solid transparent;
       box-shadow: 0 0 5px 1px $offwhite;
@@ -83,7 +90,8 @@
   }
   textarea {
     border: 2px solid $offwhite;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: rgba($color: $offwhite, $alpha: 0.1);
       border: 2px solid transparent;
       box-shadow: 0 0 5px 1px $offwhite;

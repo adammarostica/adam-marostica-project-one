@@ -283,6 +283,10 @@ a {
   outline: 2px solid #ff8327;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .skip-link {
   position: absolute;
   left: -1000px;
@@ -517,10 +521,8 @@ header .contactHeading h1 {
   transition: color 0.3s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 .spaces .fa-stack-1x {
-  -webkit-transition: text-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  transition: text-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, text-shadow 0.3s ease-out;
-  transition: transform 0.3s ease-out, text-shadow 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transition: text-shadow 0.3s ease-out;
+  transition: text-shadow 0.3s ease-out;
 }
 .spaces h2 {
   -webkit-transition: color 0.3s ease-out;
@@ -533,8 +535,6 @@ header .contactHeading h1 {
   color: #ff8327;
 }
 .spaces a:hover > span > .fa-stack-1x, .spaces a:focus > span > .fa-stack-1x {
-  -webkit-transform: translate(-1px, -1px);
-          transform: translate(-1px, -1px);
   text-shadow: 2px 2px #111010;
 }
 
@@ -857,7 +857,7 @@ section.comments textarea:hover, section.comments textarea:focus {
   color: #1d9bf0;
 }
 .contactInfo .socialIcons a:hover .fa-whatsapp, .contactInfo .socialIcons a:focus .fa-whatsapp {
-  color: #25D366;
+  color: #25d366;
 }
 .contactInfo .fa-facebook-f:hover, .contactInfo .fa-facebook-f:focus {
   color: #2374e1;
@@ -869,7 +869,7 @@ section.comments textarea:hover, section.comments textarea:focus {
   color: #1d9bf0;
 }
 .contactInfo .fa-whatsapp:hover, .contactInfo .fa-whatsapp:focus {
-  color: #25D366;
+  color: #25d366;
 }
 
 .contactForm {
