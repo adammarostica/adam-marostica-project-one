@@ -32,16 +32,17 @@ button {
   border: none;
   background-image: linear-gradient($dustyorange 0 0);
   background-size: 100% 0%;
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   background-color: $rustred;
   color: $offwhite;
   font-family: $tulpen;
   text-transform: capitalize;
-  transition: box-shadow .4s ease-out, background-size .3s ease-out, text-shadow .3s ease-out;
+  transition: box-shadow .4s ease-out, background-size .2s .1s ease-out, text-shadow .2s .1s ease-out;
   cursor: pointer;
   &:hover,
   &:focus {
+    transition: box-shadow .4s .2s cubic-bezier(.18,.04,0,1.8), background-size .3s ease-out, text-shadow .3s ease-out;
     background-size: 100% 100%;
     box-shadow: 6px 6px $rustred;
     text-shadow: 1px 1px $black;
