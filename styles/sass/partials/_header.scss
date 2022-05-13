@@ -15,10 +15,19 @@ header {
     z-index: 1;
     ul {
       display: flex;
+      flex-direction: column;
+      position: fixed;
+      align-items: flex-start;
+      bottom: -20%;
+      background-color: $black;
       justify-content: space-between;
       width: 100%;
       max-width: 600px;
       font-size: 1.5rem;
+      transition: bottom .5s cubic-bezier(.52,-0.41,.48,1.4);
+      &.revealMenu {
+        bottom: 0%;
+      }
     }
     li {
       text-transform: uppercase;

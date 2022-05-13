@@ -411,12 +411,27 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  bottom: -20%;
+  background-color: #111010;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
   max-width: 600px;
   font-size: 1.5rem;
+  -webkit-transition: bottom 0.5s cubic-bezier(0.52, -0.41, 0.48, 1.4);
+  transition: bottom 0.5s cubic-bezier(0.52, -0.41, 0.48, 1.4);
+}
+header nav ul.revealMenu {
+  bottom: 0%;
 }
 header nav li {
   text-transform: uppercase;
@@ -498,6 +513,22 @@ header .contactHeading {
 header .blogHeading h1,
 header .contactHeading h1 {
   font-family: "Chathura", Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.burgerMenu {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 999;
+  background-color: #ff8327;
+  padding: 20px;
+  -webkit-box-shadow: 6px 6px #bf2603;
+          box-shadow: 6px 6px #bf2603;
+  cursor: pointer;
+}
+.burgerMenu i {
+  font-size: 2rem;
   color: white;
 }
 

@@ -19,11 +19,6 @@
       rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-
-    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="assets/icons/apple-touch-icon.png"
@@ -194,12 +189,13 @@
               <form action="#">
                 <div class="commenterName">
                   <label for="commentFormName">Name</label>
-                  <input type="text" id="commentFormName" required />
+                  <input type="text" name="commentFormName
+                  id="commentFormName" required />
                 </div>
 
                 <div class="commenterEmail">
                   <label for="commentFormEmail">Email address</label>
-                  <input type="email" id="commentFormEmail" required />
+                  <input type="email" name="commentFormEmail" id="commentFormEmail" required />
                 </div>
                 <textarea
                   name="commentFormTextArea"
@@ -220,5 +216,6 @@
     <footer>
       <p>Copyright © 2019 HackerYou</p>
     </footer>
+    <script src="./scripts/commentSection.js"></script>
   </body>
 </html>
