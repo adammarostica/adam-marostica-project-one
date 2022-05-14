@@ -1,105 +1,91 @@
-// add a submit listener to our submit button
-  const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// Day and month arrays for use with Date object
+const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-  const monthsOfTheYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const monthsOfTheYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-  const formElement = document.querySelector('form');
-  const newCommentSection = document.querySelector('.newComment');
+const formElement = document.querySelector('form');
+const commentSection = document.querySelector('.commentList');
 
-  // function nthEnding(num) {
-  //   const endsWith = String(num % 10);
-  //   if (endsWith == '1') return `${num}st`;
-  //   if (endsWith == '2') return `${num}nd`;
-  //   if (endsWith == '3') return `${num}rd`;
-  //   return `${num}th`;
-  // }
 
-  // console.log(nthEnding(3));
+// function that takes a number and returns the same number as an ordinal. Why I insisted on making it handle numbers larger than 31, I'll never know.
+function nthEnding(num) {
+  let endsWith = num % 100;
+  if (endsWith == 11) return `${num}th`;
+  if (endsWith == 12) return `${num}th`;
+  if (endsWith == 13) return `${num}th`;
+  endsWith = num % 10;
+  if (endsWith == 1) return `${num}st`;
+  if (endsWith == 2) return `${num}nd`;
+  if (endsWith == 3) return `${num}rd`;
+  return `${num}th`;
+}
 
-  function handleSubmit(e) {
+function handleSubmit(e) {
 
-    e.preventDefault();
+  e.preventDefault();
+
+  // the text input
+  const nameInput = document.querySelector('input[type=text]');
+  // and its value: the user's name
+  const name = nameInput.value;
+
+  // the email input
+  const emailInput = document.querySelector('input[type=email]');
+
+  // the textarea input
+  const commentInput = document.querySelector('textarea');
+  // and its value: the user's comment
+  const comment = commentInput.value;
   
-    // grab all the user's input and format it into an html element that we can append to the page
-    // The username, date, time, comment
+  // Create comment's outer div
+  const wrapperDiv = document.createElement('div');
+  wrapperDiv.classList.add('commentWrapper');
+  
+  // Create comment's avatar
+  const avatar = document.createElement('img');
+  avatar.src = '../assets/darsh.jpg';
+  avatar.alt = 'User avatar';
+  avatar.setAttribute('aria-hidden', 'true');
+  
+  // Create comment's inner div (wrapping name/date/comment)
+  const commentDiv = document.createElement('div');
+  commentDiv.classList.add('userComment');
+  
+  // A date object to log date of comment
+  const date = new Date();
+  date.setDate(104)
 
-    // the text input (Name)
-    const nameInput = document.querySelector('input[type=text]');
-    // the value living on the text input
-    const name = nameInput.value;
+  // Create h5 that holds user's name and date of comment
+  const userNameAndDate = document.createElement('h5');
+  
+  // Adding its text content (Date and username)
+  userNameAndDate.textContent = `
+  ${daysOfTheWeek[date.getDay()]} 
+  ${monthsOfTheYear[date.getMonth()]} 
+  ${nthEnding(date.getDate())}, 
+  ${date.getFullYear()} 
+  by ${name}`;
 
-    // the email input
-    const emailInput = document.querySelector('input[type=email]');
+  // Create p that holds user's comment
+  const userComment = document.createElement('p');
+  
+  // Adding its text content (Comment provided in textarea)
+  userComment.textContent = comment;
 
-    // the textarea input
-    const commentInput = document.querySelector('textarea');
-    // the value living on the textarea input
-    const comment = commentInput.value;
+  // Compile name, date, and comment into inner div
+  commentDiv.append(userNameAndDate, userComment);
+  
+  // Compile avatar and inner div into outer div
+  wrapperDiv.append(avatar, commentDiv);
 
-    // a date object
-    const date = new Date();
+  // Add it to the end of the comment section
+  commentSection.append(wrapperDiv);
 
-    // Element wrapping comment setup the same way as our existing comments
-    const wrapperDiv = document.createElement('div');
-    wrapperDiv.classList.add('commentWrapper');
-    
-    // img with its src and other attributes
-    const avatar = document.createElement('img');
-    avatar.src = '../assets/darsh.jpg';
-    avatar.alt = 'User avatar';
-    avatar.setAttribute('aria-hidden', 'true');
+  // Clear inputs
+  nameInput.value = '';
+  emailInput.value = '';
+  commentInput.value = '';
 
-    // Element wrapping the comment itself
-    const commentDiv = document.createElement('div');
-    commentDiv.classList.add('userComment');
+}
 
-    // Our username and date ELEMENT
-    const userNameAndDate = document.createElement('h5');
-    // Adding its text content (Date and username)
-    userNameAndDate.textContent = `
-    ${daysOfTheWeek[date.getDay()]} 
-    ${monthsOfTheYear[date.getMonth()]} 
-    ${date.getDate()}, 
-    ${date.getFullYear()} 
-    by ${name}`;
-
-    // Our user comment ELEMENT
-    const userComment = document.createElement('p');
-    // Adding its text content (Comment provided in textarea)
-    userComment.textContent = comment;
-
-    // Compile the comment div
-    commentDiv.append(userNameAndDate, userComment);
-    
-    // Compile it
-    wrapperDiv.append(avatar, commentDiv);
-
-    // append it to the comment "section"
-    newCommentSection.prepend(wrapperDiv);
-
-    // clear inputs
-    nameInput.value = '';
-    emailInput.value = '';
-    commentInput.value = '';
-
-  }
-
-  formElement.addEventListener('submit', handleSubmit);
-
-
-
-
-// For reference, my html:
-
-/* <div class="commentWrapper">
-  <img src="assets/comment-image-1.jpg" alt="User avatar" aria-hidden="true" />
-  <div class="userComment">
-    <h5>Tuesday October 9th, 2019 by Sulaire</h5>
-    <p>
-      Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec.Donec viverra
-      eleifend lacus, vitae ullamcorper metus. Sedsollicitudin ipsum quis nunc
-      sollicitudin ultrices. Donec euismodscelerisque ligula. Maecenas eu varius
-      risus..
-    </p>
-  </div>
-</div> */
+formElement.addEventListener('submit', handleSubmit);

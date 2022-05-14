@@ -14,19 +14,28 @@ header {
     padding-top: 10px;
     z-index: 1;
     ul {
+      z-index: 6;
       display: flex;
       flex-direction: column;
       position: fixed;
+      opacity: 0;
       align-items: flex-start;
+      margin-left: 37vw;
       bottom: -20%;
-      background-color: $black;
       justify-content: space-between;
-      width: 100%;
+      width: 63vw;
       max-width: 600px;
       font-size: 1.5rem;
-      transition: bottom .5s cubic-bezier(.52,-0.41,.48,1.4);
+      transition: right .3s cubic-bezier(.52,-0.41,.48,1.4);
       &.revealMenu {
-        bottom: 0%;
+        opacity: 1;
+        bottom: 12%;
+        transition: bottom .3s .3s cubic-bezier(.52,-0.41,.48,1.4), opacity .6s cubic-bezier(1,.01,.94,.7);
+      }
+      &.swipeMenu {
+        bottom: 12%;
+        transform: translateX(180px);
+        transition: transform .3s cubic-bezier(.4,.18,.82,1.27), opacity .3s ease-out;
       }
     }
     li {
@@ -34,11 +43,11 @@ header {
     }
     a {
       padding: 10px 9px;
-      transition: color 0.3s ease-out, transform 0.3s ease-out;
+      transition: text-shadow 0.3s ease-out, transform 0.3s ease-out;
       &:hover,
       &:focus {
-        color: $dustyorange;
-        transform: translateY(5px);
+        text-shadow: 1px 1px $black;
+        transform: translateX(5px);
       }
     }
     .navLogo {
@@ -52,7 +61,8 @@ header {
     }
     // Colour the nav link of the page the user is currently on
     .youAreHere a {
-      color: $dustyorange;
+      text-shadow: 1px 1px $black;
+      transform: translateX(5px);
     }
   }
   .heading {
