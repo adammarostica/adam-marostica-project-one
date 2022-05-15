@@ -8,16 +8,16 @@ menuButton.addEventListener('click', function(e) {
   if (navList.className === 'showNav') {
     navList.classList.replace('showNav', 'hideNav');
     this.classList.replace('growMenu', 'shrinkMenu');
+    burgerIcon.classList.replace('burgerChange', 'burgerRevert');
     setTimeout(() => {
       navList.classList.remove('hideNav');
       this.classList.remove('shrinkMenu');
+      burgerIcon.classList.remove('burgerRevert');
     }, 600);
   } else if (navList.className === '') {
-    navList.classList.toggle('showNav');
+    navList.classList.add('showNav');
     this.classList.add('growMenu');
+    burgerIcon.classList.add('burgerChange');
   }
 
-  burgerIcon.children[0].classList.toggle('changeTop');
-  burgerIcon.children[1].classList.toggle('changeMid');
-  burgerIcon.children[2].classList.toggle('changeBtm');
 });

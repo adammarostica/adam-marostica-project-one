@@ -436,6 +436,124 @@ nav {
             box-shadow: 6px 6px #ff8327;
   }
 }
+@-webkit-keyframes burgerTopChange {
+  50% {
+    -webkit-transform: translateY(11px);
+            transform: translateY(11px);
+  }
+  100% {
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
+  }
+}
+@keyframes burgerTopChange {
+  50% {
+    -webkit-transform: translateY(11px);
+            transform: translateY(11px);
+  }
+  100% {
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
+  }
+}
+@-webkit-keyframes burgerTopRevert {
+  0% {
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translateY(11px);
+            transform: translateY(11px);
+  }
+}
+@keyframes burgerTopRevert {
+  0% {
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
+  }
+  50% {
+    -webkit-transform: translateY(11px);
+            transform: translateY(11px);
+  }
+}
+@-webkit-keyframes burgerMidChange {
+  49% {
+    width: 36px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+@keyframes burgerMidChange {
+  49% {
+    width: 36px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+@-webkit-keyframes burgerMidRevert {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+}
+@keyframes burgerMidRevert {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+}
+@-webkit-keyframes burgerBtmChange {
+  50% {
+    -webkit-transform: translateY(-11px);
+            transform: translateY(-11px);
+  }
+  100% {
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
+  }
+}
+@keyframes burgerBtmChange {
+  50% {
+    -webkit-transform: translateY(-11px);
+            transform: translateY(-11px);
+  }
+  100% {
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
+  }
+}
+@-webkit-keyframes burgerBtmRevert {
+  0% {
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(-11px);
+            transform: translateY(-11px);
+  }
+}
+@keyframes burgerBtmRevert {
+  0% {
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
+  }
+  50% {
+    -webkit-transform: translateY(-11px);
+            transform: translateY(-11px);
+  }
+}
 header {
   position: relative;
   height: 35vh;
@@ -640,38 +758,39 @@ header .contactHeading h1 {
   height: 5px;
   background-color: rgb(255, 255, 255);
   margin: 6px 0;
-  -webkit-transition: width 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27), -webkit-transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27);
-  transition: width 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27), -webkit-transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27);
-  transition: transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27), width 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27);
-  transition: transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27), width 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27), -webkit-transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27);
+  transition: -webkit-transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27);
+  transition: transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27);
+  transition: transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27), -webkit-transform 0.4s cubic-bezier(0.4, 0.18, 0.82, 1.27);
   border-radius: 10px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
-.burgerTop {
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+.burgerChange .burgerTop {
+  -webkit-animation: burgerTopChange 0.6s ease-out forwards;
+          animation: burgerTopChange 0.6s ease-out forwards;
+}
+.burgerChange .burgerMid {
+  -webkit-animation: burgerMidChange 0.6s ease-out forwards;
+          animation: burgerMidChange 0.6s ease-out forwards;
+}
+.burgerChange .burgerBtm {
+  -webkit-animation: burgerBtmChange 0.6s ease-out forwards;
+          animation: burgerBtmChange 0.6s ease-out forwards;
 }
 
-.burgerBtm {
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+.burgerRevert .burgerTop {
+  -webkit-animation: burgerTopRevert 0.6s ease-out forwards;
+          animation: burgerTopRevert 0.6s ease-out forwards;
 }
-
-.changeTop {
-  -webkit-transform: rotate(225deg) translate(-41px, 1px);
-          transform: rotate(225deg) translate(-41px, 1px);
+.burgerRevert .burgerMid {
+  -webkit-animation: burgerMidRevert 0.3s ease-out forwards;
+          animation: burgerMidRevert 0.3s ease-out forwards;
 }
-
-.changeMid {
-  width: 1px;
-  margin-left: 18px;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.changeBtm {
-  -webkit-transform: rotate(-225deg) translate(-41px, -1px);
-          transform: rotate(-225deg) translate(-41px, -1px);
+.burgerRevert .burgerBtm {
+  -webkit-animation: burgerBtmRevert 0.6s ease-out forwards;
+          animation: burgerBtmRevert 0.6s ease-out forwards;
 }
 
 .spaces {
