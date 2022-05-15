@@ -1,29 +1,29 @@
 // burger menu box shadow animations
 @keyframes revealShadow {
   0% {
-    box-shadow: 6px 6px $dustyorange;
+    box-shadow: 7px 7px $dustyorange;
   }
 
   50% {
-    box-shadow: -6px 6px $dustyorange;
+    box-shadow: -7px 7px $dustyorange;
   }
 
   100% {
-    box-shadow: -6px -6px $dustyorange;
+    box-shadow: -7px -7px $dustyorange;
   }
 }
 
 @keyframes revertShadow {
   0% {
-    box-shadow: -6px -6px $dustyorange;
+    box-shadow: -7px -7px $dustyorange;
   }
 
   50% {
-    box-shadow: 6px -6px $dustyorange;
+    box-shadow: 7px -7px $dustyorange;
   }
 
   100% {
-    box-shadow: 6px 6px $dustyorange;
+    box-shadow: 7px 7px $dustyorange;
   }
 }
 

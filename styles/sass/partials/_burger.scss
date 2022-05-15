@@ -9,7 +9,7 @@
   bottom: 30px;
   z-index: 5;
   background-color: $rustred;
-  box-shadow: 6px 6px $dustyorange;
+  box-shadow: 7px 7px $dustyorange;
   cursor: pointer;
   transition: width .3s cubic-bezier(.46,-0.42,.48,1.42), height .3s .3s cubic-bezier(.46,-0.42,.48,1.42);
   i {
@@ -49,8 +49,6 @@
   border-radius: 10px;
   transform-origin: center;
 }
-
-
 
 .burgerChange {
   .burgerTop {

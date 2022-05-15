@@ -381,59 +381,59 @@ nav {
 
 @-webkit-keyframes revealShadow {
   0% {
-    -webkit-box-shadow: 6px 6px #ff8327;
-            box-shadow: 6px 6px #ff8327;
+    -webkit-box-shadow: 7px 7px #ff8327;
+            box-shadow: 7px 7px #ff8327;
   }
   50% {
-    -webkit-box-shadow: -6px 6px #ff8327;
-            box-shadow: -6px 6px #ff8327;
+    -webkit-box-shadow: -7px 7px #ff8327;
+            box-shadow: -7px 7px #ff8327;
   }
   100% {
-    -webkit-box-shadow: -6px -6px #ff8327;
-            box-shadow: -6px -6px #ff8327;
+    -webkit-box-shadow: -7px -7px #ff8327;
+            box-shadow: -7px -7px #ff8327;
   }
 }
 
 @keyframes revealShadow {
   0% {
-    -webkit-box-shadow: 6px 6px #ff8327;
-            box-shadow: 6px 6px #ff8327;
+    -webkit-box-shadow: 7px 7px #ff8327;
+            box-shadow: 7px 7px #ff8327;
   }
   50% {
-    -webkit-box-shadow: -6px 6px #ff8327;
-            box-shadow: -6px 6px #ff8327;
+    -webkit-box-shadow: -7px 7px #ff8327;
+            box-shadow: -7px 7px #ff8327;
   }
   100% {
-    -webkit-box-shadow: -6px -6px #ff8327;
-            box-shadow: -6px -6px #ff8327;
+    -webkit-box-shadow: -7px -7px #ff8327;
+            box-shadow: -7px -7px #ff8327;
   }
 }
 @-webkit-keyframes revertShadow {
   0% {
-    -webkit-box-shadow: -6px -6px #ff8327;
-            box-shadow: -6px -6px #ff8327;
+    -webkit-box-shadow: -7px -7px #ff8327;
+            box-shadow: -7px -7px #ff8327;
   }
   50% {
-    -webkit-box-shadow: 6px -6px #ff8327;
-            box-shadow: 6px -6px #ff8327;
+    -webkit-box-shadow: 7px -7px #ff8327;
+            box-shadow: 7px -7px #ff8327;
   }
   100% {
-    -webkit-box-shadow: 6px 6px #ff8327;
-            box-shadow: 6px 6px #ff8327;
+    -webkit-box-shadow: 7px 7px #ff8327;
+            box-shadow: 7px 7px #ff8327;
   }
 }
 @keyframes revertShadow {
   0% {
-    -webkit-box-shadow: -6px -6px #ff8327;
-            box-shadow: -6px -6px #ff8327;
+    -webkit-box-shadow: -7px -7px #ff8327;
+            box-shadow: -7px -7px #ff8327;
   }
   50% {
-    -webkit-box-shadow: 6px -6px #ff8327;
-            box-shadow: 6px -6px #ff8327;
+    -webkit-box-shadow: 7px -7px #ff8327;
+            box-shadow: 7px -7px #ff8327;
   }
   100% {
-    -webkit-box-shadow: 6px 6px #ff8327;
-            box-shadow: 6px 6px #ff8327;
+    -webkit-box-shadow: 7px 7px #ff8327;
+            box-shadow: 7px 7px #ff8327;
   }
 }
 @-webkit-keyframes burgerTopChange {
@@ -573,6 +573,7 @@ header .wrapper {
   height: 100%;
 }
 header nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -580,7 +581,7 @@ header nav {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 10px;
-  z-index: 1;
+  z-index: 2;
 }
 header nav ul {
   z-index: 6;
@@ -712,8 +713,8 @@ header .contactHeading h1 {
   bottom: 30px;
   z-index: 5;
   background-color: #bf2603;
-  -webkit-box-shadow: 6px 6px #ff8327;
-          box-shadow: 6px 6px #ff8327;
+  -webkit-box-shadow: 7px 7px #ff8327;
+          box-shadow: 7px 7px #ff8327;
   cursor: pointer;
   -webkit-transition: width 0.3s cubic-bezier(0.46, -0.42, 0.48, 1.42), height 0.3s 0.3s cubic-bezier(0.46, -0.42, 0.48, 1.42);
   transition: width 0.3s cubic-bezier(0.46, -0.42, 0.48, 1.42), height 0.3s 0.3s cubic-bezier(0.46, -0.42, 0.48, 1.42);
@@ -1169,6 +1170,7 @@ section.comments textarea:hover, section.comments textarea:focus {
 }
 
 .contactForm {
+  z-index: 1;
   margin-top: -20px;
   padding: 30px;
   -webkit-box-shadow: 2vw 2vw #ff8327;
@@ -1225,6 +1227,7 @@ section.comments textarea:hover, section.comments textarea:focus {
   }
   header nav {
     padding-top: 15px;
+    position: static;
   }
   header nav .navLogo {
     display: block;
