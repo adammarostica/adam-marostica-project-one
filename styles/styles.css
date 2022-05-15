@@ -416,16 +416,16 @@ header nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: fixed;
-  opacity: 0;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-left: 37vw;
-  bottom: -20%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: fixed;
+  opacity: 0;
+  margin-left: 37vw;
+  bottom: -20%;
   width: 63vw;
   max-width: 600px;
   font-size: 1.5rem;
@@ -475,18 +475,6 @@ header nav .youAreHere a {
   text-shadow: 1px 1px #111010;
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
-}
-header .heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
 }
 header h1 {
   font-size: 5rem;
@@ -1060,6 +1048,39 @@ section.comments textarea:hover, section.comments textarea:focus {
   header nav .navLogo {
     display: block;
   }
+  header nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: static;
+    margin: 0;
+    opacity: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: unset;
+  }
+  header nav ul.swipeMenu {
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  header nav a {
+    -webkit-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+  }
+  header nav a:hover, header nav a:focus {
+    color: #ff8327;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  header nav .youAreHere a {
+    color: #ff8327;
+    -webkit-transform: unset;
+            transform: unset;
+  }
   header h1 {
     font-size: 9rem;
     line-height: 9rem;
@@ -1079,6 +1100,9 @@ section.comments textarea:hover, section.comments textarea:focus {
   header .blogHeading h1,
 header .contactHeading h1 {
     font-size: 5rem;
+  }
+  header .burgerMenu {
+    display: none;
   }
 
   section.comments .commentWrapper {

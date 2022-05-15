@@ -6,6 +6,29 @@
       .navLogo {
         display: block;
       }
+      ul {
+        flex-direction: row;
+        position: static;
+        margin: 0;
+        opacity: 1;
+        align-items: center;
+        width: unset;
+        &.swipeMenu {
+          transform: unset;
+        }
+      }
+      a {
+        transition: color .3s ease-out;
+        &:hover, &:focus {
+          color: $dustyorange;
+          box-shadow: unset;
+          transform: unset;
+        }
+      }
+      .youAreHere a {
+        color: $dustyorange;
+        transform: unset;
+      }
     }
     h1 {
       font-size: 9rem;
@@ -27,6 +50,9 @@
     .blogHeading h1,
     .contactHeading h1 {
       font-size: 5rem;
+    }
+    .burgerMenu {
+      display: none;
     }
   }
   section.comments {
