@@ -438,42 +438,42 @@ nav {
 }
 @-webkit-keyframes burgerTopChange {
   50% {
-    -webkit-transform: translateY(11px);
-            transform: translateY(11px);
+    -webkit-transform: translate(0, 11px);
+            transform: translate(0, 11px);
   }
   100% {
-    -webkit-transform: translateY(11px) rotate(45deg);
-            transform: translateY(11px) rotate(45deg);
+    -webkit-transform: translate(0, 11px) rotate(45deg);
+            transform: translate(0, 11px) rotate(45deg);
   }
 }
 @keyframes burgerTopChange {
   50% {
-    -webkit-transform: translateY(11px);
-            transform: translateY(11px);
+    -webkit-transform: translate(0, 11px);
+            transform: translate(0, 11px);
   }
   100% {
-    -webkit-transform: translateY(11px) rotate(45deg);
-            transform: translateY(11px) rotate(45deg);
+    -webkit-transform: translate(0, 11px) rotate(45deg);
+            transform: translate(0, 11px) rotate(45deg);
   }
 }
 @-webkit-keyframes burgerTopRevert {
   0% {
-    -webkit-transform: translateY(11px) rotate(45deg);
-            transform: translateY(11px) rotate(45deg);
+    -webkit-transform: translate(0, 11px) rotate(45deg);
+            transform: translate(0, 11px) rotate(45deg);
   }
   50% {
-    -webkit-transform: translateY(11px);
-            transform: translateY(11px);
+    -webkit-transform: translate(0, 11px);
+            transform: translate(0, 11px);
   }
 }
 @keyframes burgerTopRevert {
   0% {
-    -webkit-transform: translateY(11px) rotate(45deg);
-            transform: translateY(11px) rotate(45deg);
+    -webkit-transform: translate(0, 11px) rotate(45deg);
+            transform: translate(0, 11px) rotate(45deg);
   }
   50% {
-    -webkit-transform: translateY(11px);
-            transform: translateY(11px);
+    -webkit-transform: translate(0, 11px);
+            transform: translate(0, 11px);
   }
 }
 @-webkit-keyframes burgerMidChange {
@@ -516,42 +516,42 @@ nav {
 }
 @-webkit-keyframes burgerBtmChange {
   50% {
-    -webkit-transform: translateY(-11px);
-            transform: translateY(-11px);
+    -webkit-transform: translate(0, -11px);
+            transform: translate(0, -11px);
   }
   100% {
-    -webkit-transform: translateY(-11px) rotate(-45deg);
-            transform: translateY(-11px) rotate(-45deg);
+    -webkit-transform: translate(0, -11px) rotate(-45deg);
+            transform: translate(0, -11px) rotate(-45deg);
   }
 }
 @keyframes burgerBtmChange {
   50% {
-    -webkit-transform: translateY(-11px);
-            transform: translateY(-11px);
+    -webkit-transform: translate(0, -11px);
+            transform: translate(0, -11px);
   }
   100% {
-    -webkit-transform: translateY(-11px) rotate(-45deg);
-            transform: translateY(-11px) rotate(-45deg);
+    -webkit-transform: translate(0, -11px) rotate(-45deg);
+            transform: translate(0, -11px) rotate(-45deg);
   }
 }
 @-webkit-keyframes burgerBtmRevert {
   0% {
-    -webkit-transform: translateY(-11px) rotate(-45deg);
-            transform: translateY(-11px) rotate(-45deg);
+    -webkit-transform: translate(0, -11px) rotate(-45deg);
+            transform: translate(0, -11px) rotate(-45deg);
   }
   50% {
-    -webkit-transform: translateY(-11px);
-            transform: translateY(-11px);
+    -webkit-transform: translate(0, -11px);
+            transform: translate(0, -11px);
   }
 }
 @keyframes burgerBtmRevert {
   0% {
-    -webkit-transform: translateY(-11px) rotate(-45deg);
-            transform: translateY(-11px) rotate(-45deg);
+    -webkit-transform: translate(0, -11px) rotate(-45deg);
+            transform: translate(0, -11px) rotate(-45deg);
   }
   50% {
-    -webkit-transform: translateY(-11px);
-            transform: translateY(-11px);
+    -webkit-transform: translate(0, -11px);
+            transform: translate(0, -11px);
   }
 }
 header {
