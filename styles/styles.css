@@ -437,43 +437,59 @@ nav {
   }
 }
 @-webkit-keyframes burgerTopChange {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
   50% {
-    -webkit-transform: translate(0, 11px);
-            transform: translate(0, 11px);
+    -webkit-transform: translateY(11px);
+            transform: translateY(11px);
   }
   100% {
-    -webkit-transform: translate(0, 11px) rotate(45deg);
-            transform: translate(0, 11px) rotate(45deg);
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
   }
 }
 @keyframes burgerTopChange {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
   50% {
-    -webkit-transform: translate(0, 11px);
-            transform: translate(0, 11px);
+    -webkit-transform: translateY(11px);
+            transform: translateY(11px);
   }
   100% {
-    -webkit-transform: translate(0, 11px) rotate(45deg);
-            transform: translate(0, 11px) rotate(45deg);
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
   }
 }
 @-webkit-keyframes burgerTopRevert {
   0% {
-    -webkit-transform: translate(0, 11px) rotate(45deg);
-            transform: translate(0, 11px) rotate(45deg);
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
   }
   50% {
-    -webkit-transform: translate(0, 11px);
-            transform: translate(0, 11px);
+    -webkit-transform: translateY(11px);
+            transform: translateY(11px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 @keyframes burgerTopRevert {
   0% {
-    -webkit-transform: translate(0, 11px) rotate(45deg);
-            transform: translate(0, 11px) rotate(45deg);
+    -webkit-transform: translateY(11px) rotate(45deg);
+            transform: translateY(11px) rotate(45deg);
   }
   50% {
-    -webkit-transform: translate(0, 11px);
-            transform: translate(0, 11px);
+    -webkit-transform: translateY(11px);
+            transform: translateY(11px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 @-webkit-keyframes burgerMidChange {
@@ -515,43 +531,59 @@ nav {
   }
 }
 @-webkit-keyframes burgerBtmChange {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
   50% {
-    -webkit-transform: translate(0, -11px);
-            transform: translate(0, -11px);
+    -webkit-transform: translateY(-11px);
+            transform: translateY(-11px);
   }
   100% {
-    -webkit-transform: translate(0, -11px) rotate(-45deg);
-            transform: translate(0, -11px) rotate(-45deg);
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
   }
 }
 @keyframes burgerBtmChange {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
   50% {
-    -webkit-transform: translate(0, -11px);
-            transform: translate(0, -11px);
+    -webkit-transform: translateY(-11px);
+            transform: translateY(-11px);
   }
   100% {
-    -webkit-transform: translate(0, -11px) rotate(-45deg);
-            transform: translate(0, -11px) rotate(-45deg);
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
   }
 }
 @-webkit-keyframes burgerBtmRevert {
   0% {
-    -webkit-transform: translate(0, -11px) rotate(-45deg);
-            transform: translate(0, -11px) rotate(-45deg);
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
   }
   50% {
-    -webkit-transform: translate(0, -11px);
-            transform: translate(0, -11px);
+    -webkit-transform: translateY(-11px);
+            transform: translateY(-11px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 @keyframes burgerBtmRevert {
   0% {
-    -webkit-transform: translate(0, -11px) rotate(-45deg);
-            transform: translate(0, -11px) rotate(-45deg);
+    -webkit-transform: translateY(-11px) rotate(-45deg);
+            transform: translateY(-11px) rotate(-45deg);
   }
   50% {
-    -webkit-transform: translate(0, -11px);
-            transform: translate(0, -11px);
+    -webkit-transform: translateY(-11px);
+            transform: translateY(-11px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 header {
