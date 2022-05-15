@@ -27,12 +27,12 @@ header {
       max-width: 600px;
       font-size: 1.5rem;
       transition: right .3s cubic-bezier(.52,-0.41,.48,1.4);
-      &.revealMenu {
+      &.showNav {
         opacity: 1;
         bottom: 12%;
         transition: bottom .3s .3s cubic-bezier(.52,-0.41,.48,1.4), opacity .6s cubic-bezier(1,.01,.94,.7);
       }
-      &.swipeMenu {
+      &.hideNav {
         bottom: 12%;
         transform: translateX(180px);
         transition: transform .3s cubic-bezier(.4,.18,.82,1.27), opacity .3s ease-out;

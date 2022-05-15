@@ -16,9 +16,13 @@
     font-size: 2rem;
     color: white;
   }
-  &.expandBurger {
+  &.growMenu {
     width: 60vw;
     height: 300px;
+    animation: revealShadow .6s cubic-bezier(.52,-0.41,.48,1.4) forwards;
+  }
+  &.shrinkMenu {
+    animation: revertShadow .6s cubic-bezier(.52,-0.41,.48,1.4) forwards;
   }
 }
 

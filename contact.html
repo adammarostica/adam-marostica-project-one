@@ -56,13 +56,22 @@
       <a href="#contactMainContent" class="skip-link">Skip to main content.</a>
       <div class="wrapper">
         <nav>
-          <ul>
+          <ul id="navList">
             <li class="navHome"><a href="index.html">Home</a></li>
             <li class="navAbout"><a href="index.html#about">About</a></li>
             <li class="navLogo"><a href="index.html" tabindex="-1">Bar-One</a></li>
             <li class="navBlog"><a href="blog.html">Blog</a></li>
             <li class="navContact youAreHere"><a href="#">Contact</a></li>
           </ul>
+          <div id="burgerMenu" class="burgerMenu">
+            <div class="burgerContainer">
+              <div id="burgerIcon" class="burgerIcon">
+                <div class="burgerTop"></div>
+                <div class="burgerMid"></div>
+                <div class="burgerBtm"></div>
+              </div>
+            </div>
+          </div>
         </nav>
         <div class="contactHeading">
           <h1>Get in Touch</h1>
@@ -123,5 +132,7 @@
     <footer>
       <p>Copyright © 2019 HackerYou</p>
     </footer>
+
+    <script src="./scripts/burger.js"></script>
   </body>
   </html>

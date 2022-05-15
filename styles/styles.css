@@ -379,6 +379,63 @@ nav {
   margin: 0 auto;
 }
 
+@-webkit-keyframes revealShadow {
+  0% {
+    -webkit-box-shadow: 6px 6px #ff8327;
+            box-shadow: 6px 6px #ff8327;
+  }
+  50% {
+    -webkit-box-shadow: -6px 6px #ff8327;
+            box-shadow: -6px 6px #ff8327;
+  }
+  100% {
+    -webkit-box-shadow: -6px -6px #ff8327;
+            box-shadow: -6px -6px #ff8327;
+  }
+}
+
+@keyframes revealShadow {
+  0% {
+    -webkit-box-shadow: 6px 6px #ff8327;
+            box-shadow: 6px 6px #ff8327;
+  }
+  50% {
+    -webkit-box-shadow: -6px 6px #ff8327;
+            box-shadow: -6px 6px #ff8327;
+  }
+  100% {
+    -webkit-box-shadow: -6px -6px #ff8327;
+            box-shadow: -6px -6px #ff8327;
+  }
+}
+@-webkit-keyframes revertShadow {
+  0% {
+    -webkit-box-shadow: -6px -6px #ff8327;
+            box-shadow: -6px -6px #ff8327;
+  }
+  50% {
+    -webkit-box-shadow: 6px -6px #ff8327;
+            box-shadow: 6px -6px #ff8327;
+  }
+  100% {
+    -webkit-box-shadow: 6px 6px #ff8327;
+            box-shadow: 6px 6px #ff8327;
+  }
+}
+@keyframes revertShadow {
+  0% {
+    -webkit-box-shadow: -6px -6px #ff8327;
+            box-shadow: -6px -6px #ff8327;
+  }
+  50% {
+    -webkit-box-shadow: 6px -6px #ff8327;
+            box-shadow: 6px -6px #ff8327;
+  }
+  100% {
+    -webkit-box-shadow: 6px 6px #ff8327;
+            box-shadow: 6px 6px #ff8327;
+  }
+}
 header {
   position: relative;
   height: 35vh;
@@ -432,13 +489,13 @@ header nav ul {
   -webkit-transition: right 0.3s cubic-bezier(0.52, -0.41, 0.48, 1.4);
   transition: right 0.3s cubic-bezier(0.52, -0.41, 0.48, 1.4);
 }
-header nav ul.revealMenu {
+header nav ul.showNav {
   opacity: 1;
   bottom: 12%;
   -webkit-transition: bottom 0.3s 0.3s cubic-bezier(0.52, -0.41, 0.48, 1.4), opacity 0.6s cubic-bezier(1, 0.01, 0.94, 0.7);
   transition: bottom 0.3s 0.3s cubic-bezier(0.52, -0.41, 0.48, 1.4), opacity 0.6s cubic-bezier(1, 0.01, 0.94, 0.7);
 }
-header nav ul.swipeMenu {
+header nav ul.hideNav {
   bottom: 12%;
   -webkit-transform: translateX(180px);
           transform: translateX(180px);
@@ -547,9 +604,15 @@ header .contactHeading h1 {
   font-size: 2rem;
   color: white;
 }
-.burgerMenu.expandBurger {
+.burgerMenu.growMenu {
   width: 60vw;
   height: 300px;
+  -webkit-animation: revealShadow 0.6s cubic-bezier(0.52, -0.41, 0.48, 1.4) forwards;
+          animation: revealShadow 0.6s cubic-bezier(0.52, -0.41, 0.48, 1.4) forwards;
+}
+.burgerMenu.shrinkMenu {
+  -webkit-animation: revertShadow 0.6s cubic-bezier(0.52, -0.41, 0.48, 1.4) forwards;
+          animation: revertShadow 0.6s cubic-bezier(0.52, -0.41, 0.48, 1.4) forwards;
 }
 
 .burgerContainer {
@@ -992,7 +1055,6 @@ section.comments textarea:hover, section.comments textarea:focus {
   -webkit-box-shadow: 2vw 2vw #ff8327;
           box-shadow: 2vw 2vw #ff8327;
   background: #220303;
-  z-index: 10;
 }
 .contactForm form {
   display: -webkit-box;

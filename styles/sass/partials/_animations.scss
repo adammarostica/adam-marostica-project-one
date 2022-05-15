@@ -1,0 +1,27 @@
+@keyframes revealShadow {
+  0% {
+    box-shadow: 6px 6px $dustyorange;
+  }
+
+  50% {
+    box-shadow: -6px 6px $dustyorange;
+  }
+
+  100% {
+    box-shadow: -6px -6px $dustyorange;
+  }
+}
+
+@keyframes revertShadow {
+  0% {
+    box-shadow: -6px -6px $dustyorange;
+  }
+
+  50% {
+    box-shadow: 6px -6px $dustyorange;
+  }
+
+  100% {
+    box-shadow: 6px 6px $dustyorange;
+  }
+}
