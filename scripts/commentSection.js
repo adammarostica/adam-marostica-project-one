@@ -3,6 +3,8 @@ const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', '
 
 const monthsOfTheYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+const instructors = ['colin', 'darsh', 'owen', 'safi'];
+
 const formElement = document.querySelector('form');
 const commentSection = document.querySelector('.commentList');
 
@@ -18,6 +20,10 @@ function nthEnding(num) {
   if (endsWith == 2) return `${num}nd`;
   if (endsWith == 3) return `${num}rd`;
   return `${num}th`;
+}
+
+function getRandomItem(array) {
+  return array[Math.random() * array.length << 0];
 }
 
 function handleSubmit(e) {
@@ -43,7 +49,7 @@ function handleSubmit(e) {
   
   // Create comment's avatar
   const avatar = document.createElement('img');
-  avatar.src = '../assets/darsh.jpg';
+  avatar.src = `../assets/${getRandomItem(instructors)}.jpg`;
   avatar.alt = 'User avatar';
   avatar.setAttribute('aria-hidden', 'true');
   
