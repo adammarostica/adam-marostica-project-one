@@ -3,7 +3,7 @@ const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', '
 
 const monthsOfTheYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-const instructors = ['colin', 'darsh', 'owen', 'safi'];
+const avatarImgs = ['../assets/1.jpg', '../assets/2.jpg', '../assets/3.jpg', '../assets/4.jpg', '../assets/5.jpg', '../assets/6.jpg', '../assets/7.jpg'];
 
 const formElement = document.querySelector('form');
 const commentSection = document.querySelector('.commentList');
@@ -49,7 +49,7 @@ function handleSubmit(e) {
   
   // Create comment's avatar
   const avatar = document.createElement('img');
-  avatar.src = `../assets/${getRandomItem(instructors)}.jpg`;
+  avatar.src = `${getRandomItem(avatarImgs)}`;
   avatar.alt = 'User avatar';
   avatar.setAttribute('aria-hidden', 'true');
   
